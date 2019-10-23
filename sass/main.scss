@@ -1,0 +1,15 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Global Imports
+@import './components/font';
+@import './components/global';
+@import './components/header';
+@import './components/footer';
+
+// Pages
+@import './components/pages/landing-page';
+@import './components/pages/catalogue';
+@import './components/pages/about-us';
+
+// Miscellaneous
+@import './components/animation';

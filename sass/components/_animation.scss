@@ -1,0 +1,35 @@
+/**************** Link animations ****************/
+
+@keyframes scroll {
+    0%{
+        -webkit-transform: translateY(0); /* WebKit */
+        -moz-transform: translateY(0); /* Mozilla */
+        -o-transform: translateY(0); /* Opera */
+        -ms-transform: translateY(0); /* Internet Explorer */
+        transform: translateY(0);
+    }
+    100%{
+        -webkit-transform: translateY(10px); /* WebKit */
+        -moz-transform: translateY(10px); /* Mozilla */
+        -o-transform: translateY(10px); /* Opera */
+        -ms-transform: translateY(10px); /* Internet Explorer */
+        transform: translateY(10px);
+    }
+}
+
+@keyframes arrow-slide{
+    0%{
+        -webkit-transform: translateX(0); /* WebKit */
+        -moz-transform: translateX(0); /* Mozilla */
+        -o-transform: translateX(0); /* Opera */
+        -ms-transform: translateX(0); /* Internet Explorer */
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(5px); /* WebKit */
+        -moz-transform: translateX(5px); /* Mozilla */
+        -o-transform: translateX(5px); /* Opera */
+        -ms-transform: translateX(5px); /* Internet Explorer */
+        transform: translateX(5px);
+    }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "start-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --config webpack.development.config.js",
+    "build": "webpack --config webpack.production.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "file-loader": "^4.2.0",
+    "font-awesome-loader": "^1.0.2",
+    "mini-css-extract-plugin": "^0.8.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "terser-webpack-plugin": "^2.1.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "css-loader": "^3.2.0",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.12.0",
+    "popper.js": "^1.15.0",
+    "sass-loader": "^8.0.0",
+    "save-dev": "^2.0.0",
+    "style-loader": "^1.0.0"
+  }
+}

@@ -1,0 +1,32 @@
+/**************** Fonts ****************/
+
+$font-CinzelRegular: "Cinzel Regular";                    // 400
+$font-CinzelBold: "Cinzel Bold";                          // 700
+$font-CinzelBlack: "Cinzel Black";                        // 900
+
+$font-HindMaduraiLight: "Hind Madurai Light";             // 300
+$font-HindMaduraiRegular: "Hind Madurai Regular";         // 400
+$font-HindMaduraiMedium: "Hind Madurai Medium";           // 500
+$font-HindMaduraiSemiBold: "Hind Madurai Semi Bold";      // 600
+$font-HindMaduraiBold: "Hind Madurai Bold";               // 700
+
+/**************** Colors ****************/
+
+$orange: #b55c3b;
+$black: #131313;
+$grey: #919191;
+$white: #ffffff;
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-CinzelBold;
+}
+
+body, .content{
+    background-color: $black;
+}
+
+
+
+.content {
+    position: relative;
+}
