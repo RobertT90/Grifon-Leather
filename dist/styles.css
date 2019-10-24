@@ -8323,6 +8323,113 @@ body.open {
         left: 0;
         right: auto; } }
 
+/**************** Order Form Style ****************/
+.order-section {
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  margin-top: 160px;
+  padding-bottom: 80px;
+  grid-template-areas: ". form .";
+  grid-template-columns: 1fr 800px 1fr; }
+  .order-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -200px;
+    width: 700px;
+    height: 100%;
+    background: url(da82f76fbc73511e46bc618efbe41351.svg) no-repeat;
+    transform: rotateY(180deg);
+    opacity: 0.2; }
+  .order-section__form {
+    grid-area: form;
+    justify-content: center;
+    padding: 120px 60px 60px 60px;
+    background: #131313;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; }
+    .order-section__form .form-image {
+      position: absolute;
+      top: -99px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 195px;
+      width: 195px;
+      padding: 22px;
+      overflow: hidden;
+      border-radius: 50%;
+      background: #131313 url(ac7c41ff8d46e96762f1e4759ed01fde.png) center/contain no-repeat; }
+      .order-section__form .form-image img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover; }
+    .order-section__form p {
+      color: #919191;
+      font: 14px "Hind Madurai Regular";
+      margin-bottom: 40px; }
+    .order-section__form label {
+      width: 100%;
+      font: 16px "Cinzel Regular";
+      margin-bottom: 20px; }
+      .order-section__form label span {
+        color: #919191; }
+      .order-section__form label input {
+        width: 100%;
+        background: #131313;
+        border: 2px solid #b55c3b;
+        color: #919191;
+        padding: 5px 10px;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s; }
+        .order-section__form label input:focus {
+          outline: none;
+          margin-top: 10px;
+          -moz-box-shadow: 0 0 10px #b55c3b;
+          -webkit-box-shadow: 0 0 10px #b55c3b;
+          box-shadow: 0 0 10px #b55c3b; }
+    .order-section__form .form-submit {
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      padding: 15px 30px;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+      background: #131313;
+      color: #fff;
+      font: 16px "Cinzel Regular";
+      -webkit-transform: scale(1) translate(-50%);
+      /* WebKit */
+      -moz-transform: scale(1) translate(-50%);
+      /* Mozilla */
+      -o-transform: scale(1) translate(-50%);
+      /* Opera */
+      -ms-transform: scale(1) translate(-50%);
+      /* Internet Explorer */
+      transform: scale(1) translate(-50%);
+      -webkit-transition: 0.4s;
+      -moz-transition: 0.4s;
+      -o-transition: 0.4s;
+      transition: 0.4s; }
+      .order-section__form .form-submit:hover {
+        -moz-box-shadow: 0 0 10px #000;
+        -webkit-box-shadow: 0 0 10px #000;
+        box-shadow: 0 0 10px #000;
+        -webkit-transform: scale(1.01) translate(-50%);
+        /* WebKit */
+        -moz-transform: scale(1.01) translate(-50%);
+        /* Mozilla */
+        -o-transform: scale(1.01) translate(-50%);
+        /* Opera */
+        -ms-transform: scale(1.01) translate(-50%);
+        /* Internet Explorer */
+        transform: scale(1.01) translate(-50%); }
+
+/**************** Order Form Responsive Style ****************/
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {
