@@ -8328,14 +8328,14 @@ body.open {
   display: -ms-grid;
   display: grid;
   position: relative;
-  margin-top: 160px;
+  padding-top: 160px;
   padding-bottom: 80px;
   grid-template-areas: ". form .";
   grid-template-columns: 1fr 800px 1fr; }
   .order-section:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: 160px;
     bottom: 0;
     left: -200px;
     width: 700px;
@@ -8430,6 +8430,15 @@ body.open {
         transform: scale(1.01) translate(-50%); }
 
 /**************** Order Form Responsive Style ****************/
+@media (max-width: 991px) {
+  .order-section {
+    grid-template-columns: 40px 1fr 40px;
+    overflow: hidden; } }
+
+@media (max-width: 580px) {
+  .order-section {
+    grid-template-columns: 20px 1fr 20px; } }
+
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {

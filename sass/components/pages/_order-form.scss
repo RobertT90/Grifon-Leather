@@ -4,7 +4,7 @@
     display:-ms-grid;
     display:grid;
     position: relative;
-    margin-top: 160px;
+    padding-top: 160px;
     padding-bottom: 80px;
     grid-template-areas: 
     ". form .";
@@ -12,7 +12,7 @@
     &:before{
         content: '';
         position: absolute;
-        top: 0;
+        top: 160px;
         bottom: 0;
         left: -200px;
         width: 700px;
@@ -114,5 +114,14 @@
 /**************** Order Form Responsive Style ****************/
 
 @media(max-width:991px){
-    
+    .order-section{
+        grid-template-columns: 40px 1fr 40px;
+        overflow: hidden;
+    }
+}
+
+@media(max-width: 580px){
+    .order-section{
+        grid-template-columns: 20px 1fr 20px;
+    }
 }
