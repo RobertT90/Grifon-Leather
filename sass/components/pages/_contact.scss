@@ -1,0 +1,56 @@
+/**************** Contact Page Style ****************/
+
+.contact-section{
+    display:-ms-grid;
+    display:grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-areas: ". contact-form contact-location .";
+    padding: 80px 0;
+    &__form{
+        grid-area: contact-form;
+        h2{
+            color: $orange;
+        }
+        p{
+            font: 14px $font-HindMaduraiRegular;
+            color: $grey;
+        }
+        form{
+            -moz-box-shadow:     0 0 5px rgba(#000, 0.2);
+            -webkit-box-shadow:  0 0 5px rgba(#000, 0.2);
+            box-shadow:          0 0 5px rgba(#000, 0.2)0;
+            border: 3px solid rgba(#000, 0.2);
+            padding: 40px;
+            label{
+                width: 100%;
+                width: 100%;
+                font: 16px $font-CinzelRegular;
+                margin-bottom: 20px;
+                span{
+                    color: $grey;
+                }
+                input, textarea{
+                    width: 100%;
+                    background: $black;
+                    border: 2px solid $orange;
+                    color: $grey;
+                    padding: 5px 10px;
+                    -webkit-transition: 0.4s;
+                    -moz-transition: 0.4s;
+                    -o-transition: 0.4s;
+                    transition: 0.4s;
+                    &:focus{
+                        outline: none;
+                        margin-top: 10px;
+                        -moz-box-shadow:     0 0 10px $orange;
+                        -webkit-box-shadow:  0 0 10px $orange;
+                        box-shadow:          0 0 10px $orange;
+                    }
+                }
+             }
+        }
+    }
+    &__location{
+        grid-area: contact-location;
+    }
+}
