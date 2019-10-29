@@ -7347,7 +7347,7 @@ body.open {
   display: -ms-grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 30px 0;
+  padding-top: 30px;
   list-style: none;
   align-items: center;
   margin: 0; }
@@ -7406,6 +7406,7 @@ body.open {
   grid-area: copy-right;
   text-align: center;
   color: #b55c3b;
+  padding-top: 30px;
   margin-bottom: 20px; }
 
 /**************** Footer Responsive ****************/
@@ -8146,12 +8147,13 @@ body.open {
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
         transition: 0.4s; }
-        .catalogue-content__item .item-info button:hover {
+        .catalogue-content__item .item-info button:hover, .catalogue-content__item .item-info button:focus {
           transform: scale(0.97);
           -moz-box-shadow: 0 0 10px #b55c3b;
           -webkit-box-shadow: 0 0 10px #b55c3b;
           box-shadow: 0 0 10px #b55c3b;
-          cursor: pointer; }
+          cursor: pointer;
+          outline: none; }
 
 /**************** Catalogue Responsive Style ****************/
 @media (max-width: 991px) {
@@ -8395,7 +8397,7 @@ body.open {
           box-shadow: 0 0 10px #b55c3b; }
     .order-section__form .form-submit {
       position: absolute;
-      bottom: -25px;
+      bottom: -30px;
       left: 50%;
       padding: 15px 30px;
       border: 3px solid rgba(0, 0, 0, 0.2);
@@ -8438,6 +8440,179 @@ body.open {
 @media (max-width: 580px) {
   .order-section {
     grid-template-columns: 20px 1fr 20px; } }
+
+/**************** Contact Page Style ****************/
+.contact-section {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: 1fr 600px 50px 400px 1fr;
+  grid-template-areas: ". contact-form . contact-location .";
+  padding: 120px 0;
+  position: relative;
+  overflow-x: hidden; }
+  .contact-section h4 {
+    color: #b55c3b; }
+  .contact-section p {
+    font: 14px "Hind Madurai Regular";
+    color: #919191; }
+  .contact-section:before {
+    content: '';
+    position: absolute;
+    top: 100px;
+    bottom: 100px;
+    right: -200px;
+    z-index: 0;
+    width: 1000px;
+    opacity: 0.1;
+    background: url(da82f76fbc73511e46bc618efbe41351.svg) no-repeat;
+    background-position-x: 100%; }
+  .contact-section__form {
+    grid-area: contact-form;
+    position: relative;
+    z-index: 1; }
+    .contact-section__form P {
+      margin-bottom: 60px; }
+    .contact-section__form form {
+      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) 0;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+      padding: 40px;
+      position: relative; }
+      .contact-section__form form label {
+        width: 100%;
+        width: 100%;
+        font: 16px "Cinzel Regular";
+        margin-bottom: 20px; }
+        .contact-section__form form label span {
+          color: #919191; }
+        .contact-section__form form label input, .contact-section__form form label textarea {
+          width: 100%;
+          background: #131313;
+          border: 2px solid #b55c3b;
+          color: #919191;
+          padding: 5px 10px;
+          -webkit-transition: 0.4s;
+          -moz-transition: 0.4s;
+          -o-transition: 0.4s;
+          transition: 0.4s; }
+          .contact-section__form form label input:focus, .contact-section__form form label textarea:focus {
+            outline: none;
+            margin-top: 10px;
+            -moz-box-shadow: 0 0 10px #b55c3b;
+            -webkit-box-shadow: 0 0 10px #b55c3b;
+            box-shadow: 0 0 10px #b55c3b; }
+      .contact-section__form form .form-submit {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        padding: 15px 30px;
+        border: 3px solid rgba(0, 0, 0, 0.2);
+        background: #131313;
+        color: #fff;
+        font: 16px "Cinzel Regular";
+        -webkit-transform: scale(1) translate(-50%);
+        /* WebKit */
+        -moz-transform: scale(1) translate(-50%);
+        /* Mozilla */
+        -o-transform: scale(1) translate(-50%);
+        /* Opera */
+        -ms-transform: scale(1) translate(-50%);
+        /* Internet Explorer */
+        transform: scale(1) translate(-50%);
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
+        transition: 0.4s; }
+        .contact-section__form form .form-submit:hover, .contact-section__form form .form-submit:focus {
+          -moz-box-shadow: 0 0 10px #000;
+          -webkit-box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px #000;
+          -webkit-transform: scale(1.01) translate(-50%);
+          /* WebKit */
+          -moz-transform: scale(1.01) translate(-50%);
+          /* Mozilla */
+          -o-transform: scale(1.01) translate(-50%);
+          /* Opera */
+          -ms-transform: scale(1.01) translate(-50%);
+          /* Internet Explorer */
+          transform: scale(1.01) translate(-50%);
+          outline: none;
+          cursor: pointer; }
+  .contact-section__location {
+    grid-area: contact-location;
+    position: relative;
+    z-index: 1; }
+    .contact-section__location .open-hours {
+      justify-content: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 30px; }
+      .contact-section__location .open-hours img {
+        width: 60px;
+        margin: 30px auto 10px; }
+      .contact-section__location .open-hours p {
+        text-align: center;
+        margin-bottom: 0; }
+    .contact-section__location img {
+      width: 100%; }
+    .contact-section__location .contact-navigation {
+      display: block;
+      padding-top: 30px;
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+      text-align: center; }
+      .contact-section__location .contact-navigation li {
+        margin-bottom: 20px; }
+        .contact-section__location .contact-navigation li a {
+          text-decoration: none;
+          position: relative;
+          display: inline-block; }
+          .contact-section__location .contact-navigation li a img {
+            height: 40px;
+            width: auto; }
+          .contact-section__location .contact-navigation li a:before, .contact-section__location .contact-navigation li a:after {
+            content: '';
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            opacity: 0;
+            background-color: #b55c3b;
+            position: absolute;
+            bottom: 14px;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s; }
+          .contact-section__location .contact-navigation li a span {
+            position: absolute;
+            height: 2px;
+            bottom: 15px;
+            left: 0;
+            width: 0;
+            border-bottom: 1px dashed #b55c3b;
+            -webkit-transition: 1s;
+            -moz-transition: 1s;
+            -o-transition: 1s;
+            transition: 1s; }
+          .contact-section__location .contact-navigation li a:before {
+            left: -3px; }
+          .contact-section__location .contact-navigation li a:after {
+            right: -3px; }
+          .contact-section__location .contact-navigation li a:hover, .contact-section__location .contact-navigation li a:active {
+            text-decoration: none;
+            font: 16px "Cinzel Bold"; }
+            .contact-section__location .contact-navigation li a:hover span, .contact-section__location .contact-navigation li a:active span {
+              width: 100%; }
+            .contact-section__location .contact-navigation li a:hover:before, .contact-section__location .contact-navigation li a:active:before {
+              opacity: 1; }
+            .contact-section__location .contact-navigation li a:hover:after, .contact-section__location .contact-navigation li a:active:after {
+              opacity: 1; }
 
 /**************** Link animations ****************/
 @keyframes scroll {
