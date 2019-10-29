@@ -216,12 +216,13 @@
                 -moz-transition: 0.4s;
                 -o-transition: 0.4s;
                 transition: 0.4s;
-                &:hover{
+                &:hover, &:focus{
                     transform: scale(0.97);
                     -moz-box-shadow:     0 0 10px $orange;
                     -webkit-box-shadow:  0 0 10px $orange;
                     box-shadow:          0 0 10px $orange;
                     cursor: pointer;
+                    outline: none;
                 }
             }
         }
