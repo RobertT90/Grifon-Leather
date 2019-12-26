@@ -28,12 +28,14 @@
   "dependencies": {
     "bootstrap": "^4.3.1",
     "css-loader": "^3.2.0",
+    "fire": "^0.55.1",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "sass-loader": "^8.0.0",
     "save-dev": "^2.0.0",
+    "serialize-javascript": "^2.1.2",
     "style-loader": "^1.0.0"
   }
 }
