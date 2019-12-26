@@ -7021,44 +7021,21 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 @font-face {
-  font-family: "Cinzel Regular";
-  src: url(ed5ec0907ad0ae05139de910a564420b.ttf) format("truetype"); }
+  font-family: "Raleway Regular";
+  src: url(9942588a6c84f959132556d99e83ded6.ttf) format("truetype"); }
 
 @font-face {
-  font-family: "Cinzel Bold";
-  src: url(234ffaa5742f7fe06585709d4780d935.ttf) format("truetype"); }
+  font-family: "Raleway Bold";
+  src: url(f49f3d2d9df5013c9bfaab7e3d39ee57.ttf) format("truetype"); }
 
 @font-face {
-  font-family: "Cinzel Black";
-  src: url(31972d730cc7462ea1b70c56afab5c28.ttf) format("truetype"); }
-
-@font-face {
-  font-family: "Hind Madurai Light";
-  src: url(13c8e85cb8cde8ff4fc80d48281ae4e4.ttf) format("truetype"); }
-
-@font-face {
-  font-family: "Hind Madurai Regular";
-  src: url(689e070a5594c8bc40d4d5e4c58b8d5c.ttf) format("truetype"); }
-
-@font-face {
-  font-family: "Hind Madurai Medium";
-  src: url(d6b5c29fd6086aa69ea005e4021aba98.ttf) format("truetype"); }
-
-@font-face {
-  font-family: "Hind Madurai Semi Bold";
-  src: url(5b07df250f0dc0f61943b9e6f37570be.ttf) format("truetype"); }
-
-@font-face {
-  font-family: "Hind Madurai Bold";
-  src: url(0e4ff873f7de445f3f1e031c175461c9.ttf) format("truetype"); }
+  font-family: "Libre Baskerville Bold";
+  src: url(a105ee341ae407dc0a16dcb77a5b78aa.ttf) format("truetype"); }
 
 /**************** Fonts ****************/
 /**************** Colors ****************/
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Cinzel Bold"; }
-
-body, .content {
-  background-color: #131313; }
+  font-family: "Libre Baskerville Bold"; }
 
 .content {
   position: relative; }
@@ -7067,904 +7044,204 @@ body.open {
   overflow: hidden; }
 
 /**************** Header Main Style ****************/
-.header {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1000px 200px 1fr;
-  grid-template-areas: ". nav lang .";
-  align-items: center;
-  height: 90px;
-  position: relative;
-  z-index: 99;
-  background-color: #131313;
-  -moz-box-shadow: 0 2px 10px #000;
-  -webkit-box-shadow: 0 2px 10px #000;
-  box-shadow: 0 2px 10px #000; }
+header {
+  background-color: #1A1817; }
 
-.menu-toggle {
-  display: none; }
+.header {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1000px;
+  margin: auto;
+  padding: 20px 0; }
+
+.logo-text, .main-menu, .language-select {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
+
+.main-menu, .language-select {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none; }
+
+.logo-text {
+  flex-basis: 200px;
+  font: 16px/1 "Libre Baskerville Bold";
+  color: #ffffff;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transition: transform 0.2s ease-out; }
+  .logo-text:hover {
+    color: #ffffff;
+    transition: transform 0.2s ease-out;
+    text-decoration: none; }
 
 .main-menu {
-  grid-area: nav;
-  text-align: left;
-  position: relative;
-  margin: 0;
-  padding: 0; }
+  flex-basis: 100%; }
   .main-menu li {
-    display: inline;
-    margin: 0 10px; }
-
-.language-select {
-  grid-area: lang;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  margin: 0;
-  padding: 0; }
-  .language-select li {
-    display: inline;
-    margin: 0; }
-
-/**************** Links ****************/
-.main-menu li a {
-  color: #b55c3b;
-  font: 15px "Cinzel Regular";
-  text-transform: uppercase;
-  position: relative;
-  display: inline-block;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s; }
-  .main-menu li a:before, .main-menu li a:after {
-    content: '';
-    width: 3px;
-    height: 3px;
-    border-radius: 50%;
-    opacity: 0;
-    background-color: #b55c3b;
-    position: absolute;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s; }
-  .main-menu li a span {
-    position: absolute;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    border-bottom: 1px dashed #b55c3b;
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s; }
-  .main-menu li a:before {
-    bottom: -3px;
-    left: -3px; }
-  .main-menu li a:after {
-    bottom: -3px;
-    right: -3px; }
-  .main-menu li a:hover, .main-menu li a:active {
-    text-decoration: none;
-    font: 16px "Cinzel Bold"; }
-    .main-menu li a:hover span, .main-menu li a:active span {
-      width: 100%; }
-    .main-menu li a:hover:before, .main-menu li a:active:before {
-      opacity: 1; }
-    .main-menu li a:hover:after, .main-menu li a:active:after {
-      opacity: 1; }
-
-.language-select li a {
-  color: #ffffff;
-  font: 15px 1 "Cinzel Regular";
-  text-transform: uppercase;
-  padding: 5px 10px;
-  border: 1px solid #131313;
-  display: inline-block;
-  -webkit-transition: 0.4s;
-  -moz-transition: 0.4s;
-  -o-transition: 0.4s;
-  transition: 0.4s; }
-  .language-select li a:hover, .language-select li a:active {
-    text-decoration: none;
-    border: 1px solid #919191;
-    border-radius: 5px;
-    -moz-box-shadow: inset 0 0 10px #919191;
-    -webkit-box-shadow: inset 0 0 10px #919191;
-    box-shadow: inset 0 0 10px #919191;
-    transform: scale(0.9); }
-
-/**************** Responsive ****************/
-@media (max-width: 1200px) {
-  .header {
-    grid-template-columns: 1fr 700px 200px 1fr; } }
-
-@media (max-width: 991px) {
-  .header {
-    grid-template-areas: ". lang nav-toggle .";
-    grid-template-columns: 40px 1fr 1fr 40px;
-    grid-template-rows: 90px;
-    position: relative;
-    z-index: 99; }
-    .header .menu-button {
-      grid-area: nav-toggle;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-end;
-      background: #131313;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      z-index: 99;
-      cursor: pointer; }
-      .header .menu-button .menu-toggle {
-        display: block;
-        height: 20px;
-        width: 85px;
-        background: transparent;
-        border: none;
-        position: relative;
-        z-index: 0;
-        padding: 0;
-        outline: none;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-        .header .menu-button .menu-toggle__text {
-          position: relative;
-          width: 100%;
-          height: 100%;
-          display: grid;
-          text-align: left;
-          align-content: center;
-          color: #b55c3b;
-          font: 18px "Hind Madurai Medium";
-          margin: 0;
-          text-transform: uppercase; }
-        .header .menu-button .menu-toggle__icon, .header .menu-button .menu-toggle:before, .header .menu-button .menu-toggle:after {
-          width: 30px;
-          -webkit-transition: 0.5s;
-          -moz-transition: 0.5s;
-          -o-transition: 0.5s;
-          transition: 0.5s; }
-        .header .menu-button .menu-toggle__icon {
-          height: 2px;
-          border-radius: 3px;
-          background-color: #b55c3b;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          transform: translateY(-50%); }
-        .header .menu-button .menu-toggle:before, .header .menu-button .menu-toggle:after {
+    margin: 0 5px; }
+    .main-menu li a {
+      color: #B55C30;
+      font: 15px/1 "Raleway Regular";
+      transition: font-weight 0.4s;
+      font-weight: 400;
+      padding: 5px 10px;
+      position: relative; }
+      .main-menu li a span {
+        position: absolute;
+        left: 1px;
+        bottom: -2px;
+        width: 0;
+        opacity: 0;
+        border-bottom: 1px dashed #B55C30;
+        transition: 0.4s; }
+        .main-menu li a span:before, .main-menu li a span:after {
           content: '';
           position: absolute;
-          right: 0;
-          height: 2px;
-          border-radius: 3px;
-          background-color: #b55c3b; }
-        .header .menu-button .menu-toggle:before {
-          top: 2px; }
-        .header .menu-button .menu-toggle:after {
-          bottom: 2px; }
-        .header .menu-button .menu-toggle.open span {
-          width: 0; }
-        .header .menu-button .menu-toggle.open:before {
-          transform: rotateZ(45deg);
-          top: 9px; }
-        .header .menu-button .menu-toggle.open:after {
-          transform: rotateZ(-45deg);
-          bottom: 9px; }
-    .header .main-menu {
-      position: absolute;
-      width: 100%;
-      top: -300px;
-      height: auto;
-      text-align: center;
-      z-index: 0;
-      background-color: #131313;
-      -webkit-transition: 1s;
-      -moz-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s; }
-      .header .main-menu li {
-        display: block;
-        margin: 10px 0;
-        padding: 10px 0; }
-        .header .main-menu li a {
-          font-size: 18px; }
-          .header .main-menu li a:before, .header .main-menu li a:after {
-            content: '';
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            background-color: #b55c3b;
-            position: absolute;
-            -webkit-transition: 1s;
-            -moz-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          .header .main-menu li a span {
-            position: absolute;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            width: 100%;
-            border-bottom: 1px dashed #b55c3b;
-            -webkit-transition: 1s;
-            -moz-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          .header .main-menu li a:before {
-            bottom: -3px;
-            left: -3px; }
-          .header .main-menu li a:after {
-            bottom: -3px;
-            right: -3px; }
-    .header .language-select {
-      justify-content: left;
-      position: relative;
-      z-index: 99;
-      background: #131313;
-      height: 100%; }
-    .header.open .main-menu {
-      position: absolute;
-      top: 90px;
-      width: 100%;
-      height: auto;
-      text-align: center;
-      padding: 30px 0;
-      z-index: 5;
-      opacity: 1;
-      border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-      background-color: #131313;
-      -webkit-transition: 1s;
-      -moz-transition: 1s;
-      -o-transition: 1s;
-      transition: 1s; } }
+          bottom: -2px;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #B55C30;
+          transition: 0.4s; }
+        .main-menu li a span:before {
+          left: 0; }
+        .main-menu li a span:after {
+          right: 0; }
+      .main-menu li a:hover {
+        text-decoration: none; }
+        .main-menu li a:hover span {
+          width: 100%;
+          opacity: 1; }
 
+.language-select {
+  flex-basis: 200px;
+  margin-bottom: 0;
+  list-style: none; }
+  .language-select li {
+    margin: 0 5px; }
+    .language-select li:nth-of-type(1) {
+      margin-right: 20px; }
+  .language-select .lang a {
+    color: #ffffff;
+    font: 15px/1 "Raleway Regular";
+    font-weight: 400;
+    transition: font-weight 0.4s;
+    padding: 5px 5px; }
+    .language-select .lang a:hover {
+      font-weight: 700;
+      text-decoration: none; }
+  .language-select .lang.active a {
+    font-weight: 700; }
+  .language-select .basket-button img {
+    width: 40px; }
+
+/**************** Footer Main Style ****************/
 .footer {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 800px 1fr;
-  grid-template-areas: ". footer-nav ." ". copy-right .";
-  background-color: #131313;
-  border-top: 3px solid rgba(0, 0, 0, 0.2); }
-
-.footer-navigation {
-  grid-area: footer-nav;
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  padding-top: 30px;
-  list-style: none;
-  align-items: center;
-  margin: 0; }
-  .footer-navigation li {
-    text-align: center; }
-    .footer-navigation li img {
-      height: 40px;
-      margin-bottom: 20px; }
-    .footer-navigation li p {
-      color: #919191;
-      font: 16px/1 "Hind Madurai Regular";
-      margin: 0; }
-    .footer-navigation li a {
-      text-decoration: none;
-      position: relative;
-      display: inline-block; }
-      .footer-navigation li a:before, .footer-navigation li a:after {
-        content: '';
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        opacity: 0;
-        background-color: #b55c3b;
-        position: absolute;
-        bottom: -6px;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .footer-navigation li a span {
-        position: absolute;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        width: 0;
-        border-bottom: 1px dashed #b55c3b;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .footer-navigation li a:before {
-        left: -3px; }
-      .footer-navigation li a:after {
-        right: -3px; }
-      .footer-navigation li a:hover, .footer-navigation li a:active {
-        text-decoration: none;
-        font: 16px "Cinzel Bold"; }
-        .footer-navigation li a:hover span, .footer-navigation li a:active span {
-          width: 100%; }
-        .footer-navigation li a:hover:before, .footer-navigation li a:active:before {
-          opacity: 1; }
-        .footer-navigation li a:hover:after, .footer-navigation li a:active:after {
-          opacity: 1; }
-
-.copyright {
-  grid-area: copy-right;
-  text-align: center;
-  color: #b55c3b;
-  padding-top: 30px;
-  margin-bottom: 20px; }
-
-/**************** Footer Responsive ****************/
-@media (max-width: 991px) {
-  .footer {
-    display: -ms-grid;
-    display: grid;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 30px 1fr 30px;
-    grid-template-areas: ". . ." ". footer-nav ." ". copy-right .";
-    background-color: #131313; } }
-
-@media (max-width: 580px) {
-  .footer-navigation {
-    grid-template-columns: 1fr; }
-    .footer-navigation li {
-      margin-bottom: 20px; } }
-
-/**************** Hero Section Style ****************/
-.hero {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1000px 1fr;
-  grid-template-rows: 650px;
-  grid-template-areas: ". caption .";
-  height: 100%;
-  background-color: #131313;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-  position: relative;
-  z-index: 1; }
-
-.hero-section {
-  grid-area: caption;
-  justify-content: center;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  z-index: 0; }
-  .hero-section .overlay {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    overflow: hidden; }
-    .hero-section .overlay img {
-      display: inline-block;
-      opacity: 0.25;
-      width: 100%;
-      height: 100%;
-      margin-bottom: 0; }
-  .hero-section__caption {
+  background: #1A1817; }
+  .footer-top, .footer-bottom__wrap {
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 100%;
-    max-width: 800px; }
-    .hero-section__caption img {
-      width: 150px;
-      margin-bottom: 30px; }
-    .hero-section__caption h1 {
-      font-size: 32px;
-      text-transform: uppercase;
-      color: #b55c3b; }
-    .hero-section__caption p {
-      font: 16px "Hind Madurai Regular";
-      color: #919191; }
-  .hero-section .scroll-down {
-    position: absolute;
-    bottom: -35px;
-    right: -35px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    background-color: #131313;
-    -moz-box-shadow: 0 0 0 #000;
-    -webkit-box-shadow: 0 0 0 #000;
-    box-shadow: 0 0 0 #000;
-    -webkit-transform: scale(1);
-    /* WebKit */
-    -moz-transform: scale(1);
-    /* Mozilla */
-    -o-transform: scale(1);
-    /* Opera */
-    -ms-transform: scale(1);
-    /* Internet Explorer */
-    transform: scale(1);
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s; }
-    .hero-section .scroll-down.hovered {
-      -moz-box-shadow: 0 0 10px #000;
-      -webkit-box-shadow: 0 0 10px #000;
-      box-shadow: 0 0 10px #000;
-      -webkit-transform: scale(0.94);
-      /* WebKit */
-      -moz-transform: scale(0.94);
-      /* Mozilla */
-      -o-transform: scale(0.94);
-      /* Opera */
-      -ms-transform: scale(0.94);
-      /* Internet Explorer */
-      transform: scale(0.94); }
-    .hero-section .scroll-down a {
-      width: 100%;
-      height: 100%;
-      display: inline-block;
-      overflow: hidden; }
-      .hero-section .scroll-down a img {
-        position: absolute;
-        top: -33px;
-        left: 19px;
-        width: 40px;
-        margin: 0; }
-      .hero-section .scroll-down a:hover img {
-        animation: scroll 0.7s linear infinite alternate; }
-
-/**************** Content Section Style ****************/
-.content-links {
-  display: grid;
-  grid-template-columns: 1fr 50px 1000px 50px 1fr;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-areas: ". thread-left catlink-heading thread-right ." ". thread-left catlink-content thread-right ." ". thread-left catalog-link thread-right .";
-  align-items: center;
-  background-color: #131313;
-  height: 100%;
-  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-  position: relative; }
-  .content-links .thread-left {
-    grid-area: thread-left; }
-  .content-links .thread-right {
-    grid-area: thread-right; }
-  .content-links__heading {
-    grid-area: catlink-heading;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    width: 100%;
-    height: 100%; }
-    .content-links__heading h2 {
-      text-transform: uppercase;
-      font-size: 24px;
-      color: #b55c3b;
-      margin-bottom: 20px; }
-    .content-links__heading p {
-      font: 16px "Hind Madurai Regular";
-      color: #919191; }
-  .content-links__content {
-    grid-area: catlink-content;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    display: grid;
-    align-items: center;
-    grid-gap: 50px; }
-    .content-links__content .section-link {
+    width: 1000px;
+    margin: auto; }
+  .footer-top {
+    padding: 40px 0; }
+    .footer-top .footer-links {
       display: -webkit-box;
       display: -moz-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      background: #131313;
-      height: 100%;
-      width: 100%; }
-      .content-links__content .section-link:before, .content-links__content .section-link:after {
-        content: '';
-        width: 3px;
-        height: 3px;
-        border-radius: 50%;
-        opacity: 0;
-        background-color: #b55c3b;
-        position: absolute;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .content-links__content .section-link:before {
-        bottom: -7px;
-        left: -3px; }
-      .content-links__content .section-link:after {
-        bottom: -7px;
-        right: -3px; }
-      .content-links__content .section-link span {
-        position: absolute;
-        height: 2px;
-        bottom: -6px;
-        left: 0;
-        width: 0;
-        border-bottom: 1px dashed #b55c3b;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .content-links__content .section-link img {
-        display: inline-block;
-        max-width: 100%;
-        max-height: 100px; }
-      .content-links__content .section-link p {
-        font: 16px "Hind Madurai Light";
-        color: #b55c3b;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -40px;
-        opacity: 0;
-        text-align: center;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .content-links__content .section-link.hovered span {
-        width: 100%; }
-      .content-links__content .section-link.hovered:before {
-        opacity: 1; }
-      .content-links__content .section-link.hovered:after {
-        opacity: 1; }
-      .content-links__content .section-link.hovered p {
-        bottom: -45px;
-        opacity: 1; }
-  .content-links .collection-links {
-    grid-area: catalog-link;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    background-color: #131313; }
-    .content-links .collection-links a {
-      color: #fff;
-      font: 16px "Cinzel Regular";
-      text-align: center;
-      padding: 10px 15px;
-      border: 1px solid #b55c3b;
-      transform: scale(1);
-      -moz-box-shadow: 0 0 0 #b55c3b;
-      -webkit-box-shadow: 0 0 0 #b55c3b;
-      box-shadow: 0 0 0 #b55c3b;
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      .content-links .collection-links a span {
-        padding: 0 10px 0 0; }
-        .content-links .collection-links a span img {
-          width: 20px; }
-      .content-links .collection-links a:hover {
-        text-decoration: none;
-        transform: scale(0.97);
-        -moz-box-shadow: 0 0 10px #b55c3b;
-        -webkit-box-shadow: 0 0 10px #b55c3b;
-        box-shadow: 0 0 10px #b55c3b; }
-        .content-links .collection-links a:hover img {
-          animation: arrow-slide 0.7s linear infinite alternate; }
-
-.thread-left, .thread-right {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .thread-left__inner, .thread-right__inner {
-    position: absolute;
-    top: 1px;
-    bottom: 1px;
-    border-radius: 25px;
-    width: 100%; }
-  .thread-left:before, .thread-left:after, .thread-right:before, .thread-right:after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background-color: #b55c3b;
-    border-radius: 50%; }
-  .thread-left:before, .thread-right:before {
-    top: 0; }
-  .thread-left:after, .thread-right:after {
-    bottom: 0; }
-
-.thread-left__inner {
-  right: 0;
-  border-left: 2px dashed #b55c3b; }
-
-.thread-left:before, .thread-left:after {
-  right: 50%; }
-
-.thread-right__inner {
-  left: 0;
-  border-right: 2px dashed #b55c3b; }
-
-.thread-right:before, .thread-right:after {
-  left: 50%; }
-
-/**************** More Info Section Style ****************/
-.more-info {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 800px 1fr;
-  grid-template-rows: 100px 1fr 10px 1fr 100px;
-  grid-template-areas: ". . ." ". more-info ." ". . ." ". contact-section .";
-  height: 100%;
-  background-color: #131313; }
-  .more-info__section a, .more-info__contact a {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    text-decoration: none;
-    justify-content: center;
-    position: relative;
-    padding: 30px 0;
-    z-index: 1;
-    transform: scale(1);
-    -webkit-transition: 1s;
-    -moz-transition: 1s;
-    -o-transition: 1s;
-    transition: 1s; }
-    .more-info__section a .more-content h3, .more-info__contact a .more-content h3 {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      font: 24px/1 "Cinzel Bold";
-      color: #b55c3b;
-      text-transform: uppercase; }
-    .more-info__section a .more-img, .more-info__contact a .more-img {
-      width: 150px;
-      border-radius: 50%;
-      -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-      -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); }
-    .more-info__section a .hover-deco, .more-info__contact a .hover-deco {
-      position: absolute; }
-      .more-info__section a .hover-deco__top, .more-info__section a .hover-deco__bottom, .more-info__contact a .hover-deco__top, .more-info__contact a .hover-deco__bottom {
-        position: absolute;
-        opacity: 0;
-        width: 0;
-        height: 0;
-        z-index: 1;
-        -webkit-transition: 1s;
-        -moz-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s; }
-      .more-info__section a .hover-deco__top, .more-info__contact a .hover-deco__top {
-        top: 1px;
-        right: 1px;
-        border-top: 1px dashed #b55c3b;
-        border-right: 1px dashed #b55c3b; }
-      .more-info__section a .hover-deco__bottom, .more-info__contact a .hover-deco__bottom {
-        bottom: 1px;
-        left: 1px;
-        border-bottom: 1px dashed #b55c3b;
-        border-left: 1px dashed #b55c3b; }
-    .more-info__section a:before, .more-info__section a:after, .more-info__contact a:before, .more-info__contact a:after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background-color: #b55c3b;
-      border-radius: 50%;
-      z-index: 0;
-      opacity: 0; }
-    .more-info__section a:before, .more-info__contact a:before {
-      top: -1px;
-      left: -1px; }
-    .more-info__section a:after, .more-info__contact a:after {
-      bottom: -1px;
-      right: -1px; }
-    .more-info__section a:hover, .more-info__contact a:hover {
-      transform: scale(0.96); }
-      .more-info__section a:hover:before, .more-info__section a:hover:after, .more-info__contact a:hover:before, .more-info__contact a:hover:after {
-        opacity: 1; }
-      .more-info__section a:hover .hover-deco__top, .more-info__section a:hover .hover-deco__bottom, .more-info__contact a:hover .hover-deco__top, .more-info__contact a:hover .hover-deco__bottom {
-        opacity: 1;
-        width: 100%;
-        height: 100%; }
-  .more-info__section {
-    grid-area: more-info; }
-    .more-info__section a {
-      flex-direction: row;
-      flex-flow: row-reverse; }
-      .more-info__section a .more-content {
-        text-align: right;
-        margin-right: 40px;
-        max-width: 500px; }
-        .more-info__section a .more-content h3 {
-          flex-flow: row-reverse;
-          justify-content: end; }
-          .more-info__section a .more-content h3 img {
-            height: 24px;
-            transform: rotateZ(180deg);
-            margin-left: 10px; }
-        .more-info__section a .more-content p {
-          font: 16px/1.2 "Hind Madurai Regular";
-          color: #919191; }
-  .more-info__contact {
-    grid-area: contact-section; }
-    .more-info__contact a {
-      flex-direction: row;
-      flex-flow: row; }
-      .more-info__contact a .more-content {
-        text-align: left;
-        margin-left: 40px;
-        max-width: 500px; }
-        .more-info__contact a .more-content h3 {
-          flex-flow: row;
-          justify-content: start; }
-          .more-info__contact a .more-content h3 img {
-            height: 24px;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      list-style: none; }
+      .footer-top .footer-links li {
+        margin: 0 10px; }
+        .footer-top .footer-links li:first-of-type {
+          margin-left: 0; }
+        .footer-top .footer-links li:last-of-type {
+          margin-right: 0; }
+        .footer-top .footer-links li a {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          align-items: center;
+          color: #ffffff;
+          font: 16px/1 "Raleway Regular"; }
+          .footer-top .footer-links li a img {
+            height: 40px;
             margin-right: 10px; }
-        .more-info__contact a .more-content p {
-          font: 16px/1.2 "Hind Madurai Regular";
-          color: #919191; }
-
-/**************** Responsve ****************/
-@media (max-width: 1200px) {
-  /**************** Hero Responsive Style ****************/
-  .hero {
-    grid-template-columns: 1fr 800px 1fr; }
-  /**************** Content Section Style ****************/
-  .content-links {
-    grid-template-columns: 1fr 50px 800px 50px 1fr;
-    grid-template-rows: 200px 1fr 1fr; }
-    .content-links__content {
-      grid-template-columns: 100px 100px 100px 100px;
-      justify-content: center; } }
-
-@media (max-width: 991px) {
-  /**************** Hero Responsive Style ****************/
-  .hero {
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-areas: ". caption ."; }
-  .hero-section .scroll-down {
-    right: 50%;
-    transform: translateX(50%); }
-    .hero-section .scroll-down a img {
-      animation: scroll 0.7s linear infinite alternate; }
-    .hero-section .scroll-down.hovered {
-      right: 50%;
-      transform: translateX(50%); }
-  /**************** Content Section Style ****************/
-  .thread-left, .thread-right {
-    display: none; }
-  .content-links {
-    height: 100%;
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 250px 1fr 180px;
-    grid-template-areas: ".  catlink-heading ." ".  catlink-content ." ".  catalog-link ."; }
-    .content-links__content {
-      grid-template-columns: 100px 100px 100px 100px;
-      justify-content: center; }
-    .content-links .section-link span {
-      position: absolute;
-      height: 2px;
-      bottom: -6px;
-      left: 0;
-      width: 100%; }
-    .content-links .section-link p {
-      font: 16px "Hind Madurai Light";
-      bottom: -45px;
-      opacity: 1; }
-    .content-links .section-link:before, .content-links .section-link:after {
-      content: '';
-      opacity: 1;
-      position: absolute; }
-    .content-links .section-link:before {
-      bottom: -7px;
-      left: -3px; }
-    .content-links .section-link:after {
-      bottom: -7px;
-      right: -3px; }
-  /**************** More Info Section Style ****************/
-  .more-info {
-    grid-template-columns: 30px 1fr 30px;
-    grid-template-rows: 100px 1fr 10px 1fr 100px;
-    grid-template-areas: ". . ." ". more-info ." ". . ." ". contact-section .";
-    height: 100%; } }
-
-@media (max-width: 767px) {
-  /**************** Hero Responsive Style ****************/
-  .hero-section__caption h1 {
-    font-size: 26px; }
-  /**************** Content Section Style ****************/
-  .content-links {
-    grid-template-rows: 250px 30px 1fr 40px 100px;
-    grid-template-areas: ".  catlink-heading ." ". . ." ".  catlink-content ." ". . ." ".  catalog-link ."; }
-    .content-links__heading h2 {
-      font-size: 20px; }
-    .content-links__content {
-      grid-template-columns: 100px 100px;
-      justify-content: center; }
-  /**************** More Info Section Style ****************/
-  .more-info__section a .more-content h3, .more-info__section a .more-info h3, .more-info__contact a .more-content h3, .more-info__contact a .more-info h3 {
-    font-size: 20px; } }
-
-@media (max-width: 580px) {
-  .hero {
-    grid-template-rows: 550px; }
-  .content-links {
-    grid-template-rows: 300px 30px 1fr 40px 100px; }
-  .more-info {
-    grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 50px 1fr 10px 1fr 50px;
-    grid-template-areas: ". . ." ". more-info ." ". . ." ". contact-section .";
-    height: 100%; }
-    .more-info__section a, .more-info__contact a {
-      display: block;
-      padding: 20px; }
-      .more-info__section a .more-img, .more-info__contact a .more-img {
-        display: block;
-        margin: auto;
-        margin-bottom: 20px;
-        width: 120px; }
-      .more-info__section a .more-content, .more-info__contact a .more-content {
-        text-align: left;
+          .footer-top .footer-links li a p {
+            margin-bottom: 0;
+            position: relative; }
+            .footer-top .footer-links li a p span {
+              position: absolute;
+              bottom: -7px;
+              left: 0;
+              border: 0.5px dashed #B55C30;
+              width: 0;
+              opacity: 0;
+              transition: 0.4s; }
+              .footer-top .footer-links li a p span:before, .footer-top .footer-links li a p span:after {
+                content: '';
+                position: absolute;
+                bottom: -1px;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                background: #B55C30;
+                transition: 0.4s; }
+              .footer-top .footer-links li a p span:before {
+                left: -1px; }
+              .footer-top .footer-links li a p span:after {
+                right: -1px; }
+          .footer-top .footer-links li a:hover {
+            text-decoration: none; }
+            .footer-top .footer-links li a:hover p span {
+              width: 100%;
+              opacity: 1; }
+              .footer-top .footer-links li a:hover p span:before, .footer-top .footer-links li a:hover p span:after {
+                opacity: 1; }
+  .footer-bottom {
+    background: #B55C30;
+    padding: 10px 0; }
+    .footer-bottom__wrap {
+      justify-content: space-between;
+      align-items: center; }
+      .footer-bottom__wrap .copyright {
+        margin: 0;
+        font: 14px/1 "Raleway Regular";
+        color: #ffffff; }
+      .footer-bottom__wrap .footer-nav {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        list-style: none;
+        padding: 0;
         margin: 0; }
-        .more-info__section a .more-content h3, .more-info__contact a .more-content h3 {
-          line-height: 1.3;
-          flex-flow: row; }
-        .more-info__section a .more-content img, .more-info__contact a .more-content img {
-          margin: 0 10px 0 0;
-          width: 20px; }
-    .more-info__section a .more-content h3 img {
-      transform: rotateZ(0deg);
-      margin: 0 10px 0 0; } }
-
-@media (max-width: 480px) {
-  .content-links {
-    grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 350px 30px 1fr 40px 100px; } }
-
-@media (max-width: 375px) {
-  .hero {
-    grid-template-columns: 0 1fr 0; }
-  .hero-section {
-    padding: 0 20px; } }
+        .footer-bottom__wrap .footer-nav li {
+          margin: 0 10px;
+          font: 16px/1 "Raleway Regular"; }
+          .footer-bottom__wrap .footer-nav li:first-of-type {
+            margin-left: 0; }
+          .footer-bottom__wrap .footer-nav li:last-of-type {
+            margin-right: 0; }
+          .footer-bottom__wrap .footer-nav li a {
+            color: #ffffff; }
 
 /**************** Catalogue Menu Style ****************/
 .catalogue-menu {
@@ -7975,7 +7252,7 @@ body.open {
   grid-template-areas: ". catalogue-nav .";
   position: relative;
   z-index: 1;
-  background-color: #131313;
+  background-color: #111111;
   -moz-box-shadow: 0 2px 10px #000;
   -webkit-box-shadow: 0 2px 10px #000;
   box-shadow: 0 2px 10px #000; }
@@ -7999,7 +7276,7 @@ body.open {
   display: none; }
 
 .catalogue-menu__links li a {
-  color: #b55c3b;
+  color: #B55C30;
   font: 15px "Cinzel Regular";
   text-transform: uppercase;
   position: relative;
@@ -8014,7 +7291,7 @@ body.open {
     height: 3px;
     border-radius: 50%;
     opacity: 0;
-    background-color: #b55c3b;
+    background-color: #B55C30;
     position: absolute;
     -webkit-transition: 1s;
     -moz-transition: 1s;
@@ -8026,7 +7303,7 @@ body.open {
     bottom: -2px;
     left: 0;
     width: 0;
-    border-bottom: 1px dashed #b55c3b;
+    border-bottom: 1px dashed #B55C30;
     -webkit-transition: 1s;
     -moz-transition: 1s;
     -o-transition: 1s;
@@ -8054,7 +7331,7 @@ body.open {
   justify-content: center;
   grid-template-columns: 400px 400px;
   grid-gap: 40px;
-  background-color: #131313;
+  background-color: #111111;
   grid-template-rows: 1fr;
   padding: 60px 0;
   overflow: hidden;
@@ -8078,7 +7355,7 @@ body.open {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    border-bottom: 1px dashed #b55c3b;
+    border-bottom: 1px dashed #B55C30;
     position: relative;
     z-index: 1; }
     .catalogue-content__item:before, .catalogue-content__item:after {
@@ -8088,7 +7365,7 @@ body.open {
       width: 3px;
       height: 3px;
       border-radius: 50%;
-      background-color: #b55c3b; }
+      background-color: #B55C30; }
     .catalogue-content__item:before {
       left: 0; }
     .catalogue-content__item:after {
@@ -8122,7 +7399,7 @@ body.open {
       margin-left: 40px; }
       .catalogue-content__item .item-info h5 {
         font-size: 18px;
-        color: #b55c3b;
+        color: #B55C30;
         text-transform: uppercase;
         margin-bottom: 20px; }
       .catalogue-content__item .item-info ul {
@@ -8130,7 +7407,7 @@ body.open {
         padding: 0;
         list-style: none; }
       .catalogue-content__item .item-info p {
-        color: #b55c3b;
+        color: #B55C30;
         font-size: 14px;
         margin-bottom: 5px; }
       .catalogue-content__item .item-info button {
@@ -8138,20 +7415,20 @@ body.open {
         background-color: transparent;
         color: #ffffff;
         text-transform: uppercase;
-        border: 1px solid #b55c3b;
+        border: 1px solid #B55C30;
         transform: scale(1);
-        -moz-box-shadow: 0 0 0 #b55c3b;
-        -webkit-box-shadow: 0 0 0 #b55c3b;
-        box-shadow: 0 0 0 #b55c3b;
+        -moz-box-shadow: 0 0 0 #B55C30;
+        -webkit-box-shadow: 0 0 0 #B55C30;
+        box-shadow: 0 0 0 #B55C30;
         -webkit-transition: 0.4s;
         -moz-transition: 0.4s;
         -o-transition: 0.4s;
         transition: 0.4s; }
         .catalogue-content__item .item-info button:hover, .catalogue-content__item .item-info button:focus {
           transform: scale(0.97);
-          -moz-box-shadow: 0 0 10px #b55c3b;
-          -webkit-box-shadow: 0 0 10px #b55c3b;
-          box-shadow: 0 0 10px #b55c3b;
+          -moz-box-shadow: 0 0 10px #B55C30;
+          -webkit-box-shadow: 0 0 10px #B55C30;
+          box-shadow: 0 0 10px #B55C30;
           cursor: pointer;
           outline: none; }
 
@@ -8185,7 +7462,7 @@ body.open {
       height: 100%;
       z-index: 1;
       opacity: 0;
-      background-color: rgba(19, 19, 19, 0.5);
+      background-color: rgba(17, 17, 17, 0.5);
       -webkit-transition: 1s;
       -moz-transition: 1s;
       -o-transition: 1s;
@@ -8199,7 +7476,7 @@ body.open {
       border: none;
       width: 100px;
       font: 20px "Cinzel Regular";
-      color: #b55c3b;
+      color: #B55C30;
       text-align: left;
       padding: 0;
       background-color: transparent; }
@@ -8217,7 +7494,7 @@ body.open {
       left: -180px;
       z-index: 2;
       display: block;
-      background: #131313;
+      background: #111111;
       width: 180px;
       height: 100%;
       padding-top: 80px;
@@ -8259,7 +7536,7 @@ body.open {
         height: 100%;
         z-index: 1;
         opacity: 1;
-        background-color: rgba(19, 19, 19, 0.5);
+        background-color: rgba(17, 17, 17, 0.5);
         -webkit-transition: 1s;
         -moz-transition: 1s;
         -o-transition: 1s;
@@ -8305,7 +7582,7 @@ body.open {
       width: 200px;
       margin-bottom: 30px; }
     .about-section__content h2 {
-      color: #b55c3b;
+      color: #B55C30;
       margin-bottom: 40px; }
     .about-section__content p {
       color: #919191;
@@ -8349,7 +7626,7 @@ body.open {
     grid-area: form;
     justify-content: center;
     padding: 120px 60px 60px 60px;
-    background: #131313;
+    background: #111111;
     border: 3px solid rgba(0, 0, 0, 0.2);
     position: relative;
     z-index: 2; }
@@ -8363,7 +7640,7 @@ body.open {
       padding: 22px;
       overflow: hidden;
       border-radius: 50%;
-      background: #131313 url(ac7c41ff8d46e96762f1e4759ed01fde.png) center/contain no-repeat; }
+      background: #111111 url(ac7c41ff8d46e96762f1e4759ed01fde.png) center/contain no-repeat; }
       .order-section__form .form-image img {
         width: 100%;
         height: 100%;
@@ -8381,8 +7658,8 @@ body.open {
         color: #919191; }
       .order-section__form label input {
         width: 100%;
-        background: #131313;
-        border: 2px solid #b55c3b;
+        background: #111111;
+        border: 2px solid #B55C30;
         color: #919191;
         padding: 5px 10px;
         -webkit-transition: 0.4s;
@@ -8392,17 +7669,17 @@ body.open {
         .order-section__form label input:focus {
           outline: none;
           margin-top: 10px;
-          -moz-box-shadow: 0 0 10px #b55c3b;
-          -webkit-box-shadow: 0 0 10px #b55c3b;
-          box-shadow: 0 0 10px #b55c3b; }
+          -moz-box-shadow: 0 0 10px #B55C30;
+          -webkit-box-shadow: 0 0 10px #B55C30;
+          box-shadow: 0 0 10px #B55C30; }
     .order-section__form .form-submit {
       position: absolute;
       bottom: -30px;
       left: 50%;
       padding: 15px 30px;
       border: 3px solid rgba(0, 0, 0, 0.2);
-      background: #131313;
-      color: #fff;
+      background: #111111;
+      color: #ffffff;
       font: 16px "Cinzel Regular";
       -webkit-transform: scale(1) translate(-50%);
       /* WebKit */
@@ -8451,7 +7728,7 @@ body.open {
   position: relative;
   overflow-x: hidden; }
   .contact-section h4 {
-    color: #b55c3b; }
+    color: #B55C30; }
   .contact-section p {
     font: 14px "Hind Madurai Regular";
     color: #919191; }
@@ -8477,7 +7754,7 @@ body.open {
       -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) 0;
       border: 3px solid rgba(0, 0, 0, 0.2);
-      background: #131313;
+      background: #111111;
       padding: 40px;
       position: relative; }
       .contact-section__form form label {
@@ -8489,8 +7766,8 @@ body.open {
           color: #919191; }
         .contact-section__form form label input, .contact-section__form form label textarea {
           width: 100%;
-          background: #131313;
-          border: 2px solid #b55c3b;
+          background: #111111;
+          border: 2px solid #B55C30;
           color: #919191;
           padding: 5px 10px;
           -webkit-transition: 0.4s;
@@ -8500,17 +7777,17 @@ body.open {
           .contact-section__form form label input:focus, .contact-section__form form label textarea:focus {
             outline: none;
             margin-top: 10px;
-            -moz-box-shadow: 0 0 10px #b55c3b;
-            -webkit-box-shadow: 0 0 10px #b55c3b;
-            box-shadow: 0 0 10px #b55c3b; }
+            -moz-box-shadow: 0 0 10px #B55C30;
+            -webkit-box-shadow: 0 0 10px #B55C30;
+            box-shadow: 0 0 10px #B55C30; }
       .contact-section__form form .form-submit {
         position: absolute;
         bottom: -30px;
         left: 50%;
         padding: 15px 30px;
         border: 3px solid rgba(0, 0, 0, 0.2);
-        background: #131313;
-        color: #fff;
+        background: #111111;
+        color: #ffffff;
         font: 16px "Cinzel Regular";
         -webkit-transform: scale(1) translate(-50%);
         /* WebKit */
@@ -8583,7 +7860,7 @@ body.open {
             height: 3px;
             border-radius: 50%;
             opacity: 0;
-            background-color: #b55c3b;
+            background-color: #B55C30;
             position: absolute;
             bottom: 14px;
             -webkit-transition: 1s;
@@ -8596,7 +7873,7 @@ body.open {
             bottom: 15px;
             left: 0;
             width: 0;
-            border-bottom: 1px dashed #b55c3b;
+            border-bottom: 1px dashed #B55C30;
             -webkit-transition: 1s;
             -moz-transition: 1s;
             -o-transition: 1s;

@@ -47,7 +47,7 @@ $(document).ready(function () {
         $(this).siblings().toggleClass('open');
         $(this).toggleClass('open');
         $('body').toggleClass('open')
-    })
+    });
 
     // Content height calculator
     var contentHeight = $('.content').height();
@@ -59,13 +59,13 @@ $(document).ready(function () {
             var height = $(window).height() - haederHeight - footerHeight;
             $('.content').css('height', height);
             console.log(height);
-        })
+        });
 
         $(window).resize();
     } else {
         $('.content').css('height', 100 + '%');
     }
 
-})
+});
 
 

@@ -1,4 +1,8 @@
 /**************** Fonts ****************/
+$font-RalewayRegular: "Raleway Regular";                    // 400
+$font-RalewayBold: "Raleway Bold";                          // 700
+$font-LibreBold: "Libre Baskerville Bold";
+
 
 $font-CinzelRegular: "Cinzel Regular";                    // 400
 $font-CinzelBold: "Cinzel Bold";                          // 700
@@ -12,20 +16,17 @@ $font-HindMaduraiBold: "Hind Madurai Bold";               // 700
 
 /**************** Colors ****************/
 
-$orange: #b55c3b;
-$black: #131313;
+$orange: #B55C30;
+$black: #111111;
+$dark-brown: #1A1817;
 $grey: #919191;
 $white: #ffffff;
+// $green:  #B187C68;
+
 
 h1,h2,h3,h4,h5,h6{
-    font-family: $font-CinzelBold;
+    font-family: $font-LibreBold;
 }
-
-body, .content{
-    background-color: $black;
-}
-
-
 
 .content {
     position: relative;
