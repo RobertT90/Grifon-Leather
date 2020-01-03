@@ -4,7 +4,7 @@ body{
     }
 }
 
-/**************** Header Main Style ****************/
+/**************** Header Style ****************/
 header{
     background-color: $dark-brown;
 }
@@ -15,7 +15,7 @@ header{
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 1000px;
+    width: 1100px;
     margin: auto;
     padding: 20px 0;
 }
@@ -74,7 +74,6 @@ header{
                     height: 3px;
                     border-radius: 50%;
                     background: $orange;
-                    
                     transition: 0.4s;
                 }
                 &:before{

@@ -7040,10 +7040,16 @@ h1, h2, h3, h4, h5, h6 {
 .content {
   position: relative; }
 
+body.no-scroll {
+  position: fixed;
+  overflow-y: scroll;
+  right: 0;
+  left: 0; }
+
 body.open {
   overflow: hidden; }
 
-/**************** Header Main Style ****************/
+/**************** Header Style ****************/
 header {
   background-color: #1A1817; }
 
@@ -7053,7 +7059,7 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 1000px;
+  width: 1100px;
   margin: auto;
   padding: 20px 0; }
 
@@ -7242,6 +7248,316 @@ header {
             margin-right: 0; }
           .footer-bottom__wrap .footer-nav li a {
             color: #ffffff; }
+
+/**************** Landing Page Style ****************/
+/**************** Hero Style ****************/
+.hero {
+  position: relative;
+  background-color: rgba(17, 17, 17, 0.95);
+  overflow: hidden;
+  padding: 80px 0; }
+  .hero-caption {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    text-align: center; }
+    .hero-caption img {
+      width: 180px;
+      margin-bottom: 30px; }
+    .hero-caption h1 {
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 26px; }
+    .hero-caption p {
+      color: #B55C30;
+      font: 16px/1.5 "Raleway Regular";
+      margin-bottom: 0;
+      width: 100%; }
+  .hero-overlay {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 0;
+    right: -50px;
+    left: 0;
+    top: -50px; }
+    .hero-overlay img {
+      width: 550px;
+      opacity: 0.3; }
+
+/**************** Catalogue Overview Style ****************/
+.catalogue {
+  background-color: #111111;
+  padding: 80px 0; }
+  .catalogue h2 {
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 60px; }
+  .catalogue-links {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 900px;
+    margin: auto; }
+    .catalogue-links__item {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      padding: 20px;
+      margin: 10px;
+      position: relative;
+      background-color: #1A1817;
+      transition: 0.4s; }
+      .catalogue-links__item .item-image {
+        position: absolute;
+        top: 40px;
+        bottom: 40px;
+        left: 40px;
+        right: 40px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .catalogue-links__item .item-content {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 10px;
+        right: 10px;
+        border: 1px dashed #B55C30;
+        background-color: #1A1817;
+        opacity: 0;
+        transition: 0.4s; }
+        .catalogue-links__item .item-content p {
+          color: #B55C30;
+          margin-bottom: 0;
+          font: 15px/1 "Raleway Regular"; }
+        .catalogue-links__item .item-content:before, .catalogue-links__item .item-content:after {
+          content: '';
+          position: absolute;
+          top: -2px;
+          opacity: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 3px;
+          background-color: #B55C30; }
+        .catalogue-links__item .item-content:before {
+          left: -2px; }
+        .catalogue-links__item .item-content:after {
+          right: -2px; }
+      .catalogue-links__item:before, .catalogue-links__item:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        bottom: 9px;
+        opacity: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: #B55C30; }
+      .catalogue-links__item:before {
+        left: 9px; }
+      .catalogue-links__item:after {
+        right: 9px; }
+      .catalogue-links__item:hover img {
+        opacity: 0; }
+      .catalogue-links__item:hover .item-content {
+        opacity: 1; }
+        .catalogue-links__item:hover .item-content:before, .catalogue-links__item:hover .item-content:after {
+          opacity: 1; }
+      .catalogue-links__item:hover:before, .catalogue-links__item:hover:after {
+        opacity: 1; }
+    .catalogue-links__button {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      margin: 10px;
+      position: relative;
+      transition: 0.4s; }
+      .catalogue-links__button a {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B55C30;
+        padding: 10px 15px;
+        color: #ffffff;
+        width: 180px;
+        font: 16px/1 "Raleway Regular";
+        transition: 0.4s; }
+        .catalogue-links__button a img {
+          width: 10px;
+          transform: rotate(180deg); }
+        .catalogue-links__button a:hover {
+          text-decoration: none;
+          -moz-box-shadow: 0 0 6px #B55C30;
+          -webkit-box-shadow: 0 0 6px #B55C30;
+          box-shadow: 0 0 6px #B55C30; }
+          .catalogue-links__button a:hover img {
+            animation: arrow-slide 0.5s linear infinite alternate both; }
+
+/**************** Story Section Style ****************/
+.story {
+  background-color: #1A1817;
+  padding: 80px 0; }
+  .story-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 800px;
+    margin: auto; }
+    .story-content__image {
+      border-radius: 100%;
+      border: 1px dashed #B55C30;
+      padding: 30px;
+      width: 250px;
+      height: 250px; }
+      .story-content__image img {
+        width: 100%;
+        height: 100%;
+        background: #111111;
+        border-radius: 100%; }
+    .story-content__text {
+      width: 400px; }
+      .story-content__text h2 {
+        color: #ffffff;
+        font-size: 22px;
+        margin-bottom: 30px; }
+      .story-content__text p {
+        color: #B55C30;
+        font: 16px/1.5 "Raleway Regular";
+        margin-bottom: 30px;
+        width: 100%; }
+      .story-content__text a {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B55C30;
+        padding: 10px 15px;
+        color: #ffffff;
+        width: 140px;
+        font: 16px/1 "Raleway Regular";
+        transition: 0.4s; }
+        .story-content__text a img {
+          width: 10px;
+          transform: rotate(180deg); }
+        .story-content__text a:hover {
+          text-decoration: none;
+          -moz-box-shadow: 0 0 6px #B55C30;
+          -webkit-box-shadow: 0 0 6px #B55C30;
+          box-shadow: 0 0 6px #B55C30; }
+          .story-content__text a:hover img {
+            animation: arrow-slide 0.5s linear infinite alternate both; }
+
+/**************** Contact Section Style ****************/
+.contact {
+  background-color: #111111; }
+  .contact-form {
+    width: 600px;
+    margin: auto;
+    padding: 80px 0; }
+    .contact-form form {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      background-color: #1A1817;
+      padding: 40px 60px; }
+      .contact-form form h2 {
+        width: 100%;
+        color: #ffffff;
+        font-size: 22px;
+        margin-bottom: 30px; }
+      .contact-form form label {
+        width: 100%; }
+        .contact-form form label span {
+          font: 16px/1 "Raleway Bold";
+          color: #B55C30; }
+        .contact-form form label sup {
+          color: #B55C30; }
+        .contact-form form label input, .contact-form form label textarea {
+          font: 16px/1 "Raleway Regular";
+          width: 100%;
+          padding: 10px 10px;
+          margin: 10px 0;
+          border: 1px dashed #B55C30;
+          background-color: #1A1817;
+          color: #ffffff; }
+          .contact-form form label input:hover, .contact-form form label input:active, .contact-form form label input:focus, .contact-form form label textarea:hover, .contact-form form label textarea:active, .contact-form form label textarea:focus {
+            outline: none; }
+      .contact-form form button {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B55C30;
+        padding: 10px 15px;
+        color: #ffffff;
+        width: 100px;
+        font: 16px/1 "Raleway Regular";
+        background-color: #1A1817;
+        transition: 0.4s; }
+        .contact-form form button img {
+          width: 10px;
+          transform: rotate(180deg); }
+        .contact-form form button:hover {
+          text-decoration: none;
+          -moz-box-shadow: 0 0 6px #B55C30;
+          -webkit-box-shadow: 0 0 6px #B55C30;
+          box-shadow: 0 0 6px #B55C30; }
+          .contact-form form button:hover img {
+            animation: arrow-slide 0.5s linear infinite alternate both; }
 
 /**************** Catalogue Menu Style ****************/
 .catalogue-menu {
@@ -7927,6 +8243,46 @@ header {
   .contact-section__location .contact-navigation {
     display: block; } }
 
+/**************** Basket Style ****************/
+.basket {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  height: 0;
+  background-color: rgba(17, 17, 17, 0.5);
+  transition: 0.4s; }
+  .basket-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 500px;
+    background-color: #ffffff;
+    padding: 30px; }
+    .basket-content a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 20px;
+      height: 20px; }
+      .basket-content a img {
+        display: inline-block;
+        width: 100%;
+        height: 100%; }
+  .basket.open {
+    display: block;
+    height: 100%;
+    z-index: 10;
+    opacity: 1; }
+
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {
@@ -7952,23 +8308,23 @@ header {
 
 @keyframes arrow-slide {
   0% {
-    -webkit-transform: translateX(0);
+    -webkit-transform: translateX(0) rotate(180deg);
     /* WebKit */
-    -moz-transform: translateX(0);
+    -moz-transform: translateX(0) rotate(180deg);
     /* Mozilla */
-    -o-transform: translateX(0);
+    -o-transform: translateX(0) rotate(180deg);
     /* Opera */
-    -ms-transform: translateX(0);
+    -ms-transform: translateX(0) rotate(180deg);
     /* Internet Explorer */
-    transform: translateX(0); }
+    transform: translateX(0) rotate(180deg); }
   100% {
-    -webkit-transform: translateX(5px);
+    -webkit-transform: translateX(5px) rotate(180deg);
     /* WebKit */
-    -moz-transform: translateX(5px);
+    -moz-transform: translateX(5px) rotate(180deg);
     /* Mozilla */
-    -o-transform: translateX(5px);
+    -o-transform: translateX(5px) rotate(180deg);
     /* Opera */
-    -ms-transform: translateX(5px);
+    -ms-transform: translateX(5px) rotate(180deg);
     /* Internet Explorer */
-    transform: translateX(5px); } }
+    transform: translateX(5px) rotate(180deg); } }
 
