@@ -52,15 +52,19 @@ header{
     li{
         margin: 0 5px;
         a{
+            display: inline-block;
             color: $orange;
             font: 15px/1 $font-RalewayRegular;
             transition: font-weight 0.4s;
             font-weight: 400;
             padding: 5px 10px;
             position: relative;
+            width: 100%;
             span{
                 position: absolute;
+                top: 0;
                 left: 1px;
+                right: 0;
                 bottom: -2px;
                 width: 0;
                 opacity: 0;
@@ -125,8 +129,23 @@ header{
         }
     }
     .basket-button{
+        position: relative;
         img{
             width: 40px;
+        }
+        &.active{
+            &:before{
+                content: '';
+                position: absolute;
+                top: 0;
+                right: -4px;
+                width: 10px;
+                height: 10px;
+                border: 1px solid $white;
+                border-radius: 10px;
+                background-color: $white;
+
+            }
         }
     }
 }
