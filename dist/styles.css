@@ -7921,18 +7921,6 @@ header {
     opacity: 0.3; }
 
 /**************** About Section Responsive Style ****************/
-@media (max-width: 991px) {
-  .about-section {
-    grid-template-columns: 1fr;
-    grid-template-areas: "about-content"; }
-    .about-section__content {
-      overflow: hidden;
-      padding: 0 30px; }
-      .about-section__content:before {
-        width: 1000px;
-        left: 0;
-        right: auto; } }
-
 /**************** Order Form Style ****************/
 .order-section {
   display: -ms-grid;

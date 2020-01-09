@@ -44,17 +44,5 @@
 /**************** About Section Responsive Style ****************/
 
 @media (max-width: 991px){
-    .about-section{
-        grid-template-columns: 1fr;
-        grid-template-areas: "about-content";
-        &__content{
-            overflow: hidden;
-            padding: 0 30px;
-            &:before{
-                width: 1000px;
-                left: 0;
-                right: auto;
-            }
-        }
-    }
+    
 }
