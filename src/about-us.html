@@ -13,13 +13,15 @@
 <body>
     <!----- Header and Navigation menu ----->
     <header id="header">
-        <div class="header">
-            <div class="menu-button">
+
+        <section class="header">
+            <!-- <div class="menu-button">
                 <button class="menu-toggle">
                     <span class="menu-toggle__text">menu</span>
                     <span class="menu-toggle__icon"></span>
                 </button>
-            </div>
+            </div> -->
+            <a class="logo-text" href="#0">Grifon Leather</a>
             <ul class="main-menu">
                 <li>
                     <a href="#0">Početna
@@ -42,14 +44,20 @@
             </ul>
 
             <ul class="language-select">
-                <li><a href="#0">eng</a></li>
-                <li><a href="#0">srb</a></li>
+                <li id="basket-button" class="basket-button active"><a href="#0"><img src="../img/basket.svg" /></a>
+                </li>
+                <li class="lang"><a href="#0">Eng</a></li>
+                <li class="lang active"><a href="#0">Srb</a></li>
             </ul>
-        </div>
+        </section>
+
     </header>
     <!----- Header and Navigation menu END ----->
-    <main id="content" class="content">
+    <!----- Main Section ----->
+    <main>
+        <!----- About Section ----->
         <section class="about-section">
+            <span class="about-overlay"><img src="../img/hero-bg.svg" alt=""></span>
             <div class="about-section__content">
                 <img src="../img/logo.png" alt="">
                 <h2>Nasa Prica</h2>
@@ -101,36 +109,63 @@
                     ex. Sed sed gravida dolor, non suscipit quam.</p>
             </div>
         </section>
+        <!----- About Section ----->
     </main>
+    <!----- Main Section END----->
     <!----- Footer ----->
     <footer id="footer" class="footer">
+        <section class="footer-top">
+            <ul class="footer-links">
+                <li>
+                    <a href=" mailto:grifon-leather@neaobee.net" target="_blank">
+                        <img src="../img/envelope.png" alt="">
+                        <p>grifon-leather@neaobee.net<span></span></p>
 
-        <ul class="footer-navigation">
-            <li>
-                <a href=" mailto:grifon-leather@neaobee.net" target="_blank">
-                    <img src="../img/envelope.png" alt="">
-                    <p>grifon-leather@neaobee.net</p>
-                    <span></span>
-                </a>
-            </li>
-            <li>
-                <a href="tel:+381216434782">
-                    <img src="../img/phone.png" alt="">
-                    <p>+381 21 6434782</p>
-                    <span></span>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.google.com/maps/place/Grifon+leather/@45.2571819,19.8704702,19.5z/data=!4m5!3m4!1s0x0:0x8f279eb8840de63a!8m2!3d45.257323!4d19.8704449"
-                    target="_blank">
-                    <img src="../img/map.png" alt="">
-                    <p>Aleksandra ostrovskog 10, 21132, Petrovaradin, Srbija</p>
-                    <span></span>
-                </a>
-            </li>
-        </ul>
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+381216434782">
+                        <img src="../img/phone.png" alt="">
+                        <p>+381 21 6434782<span></span></p>
 
-        <p class="copyright">&copy; 2019 Grifon-Leather</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/place/Grifon+leather/@45.2571819,19.8704702,19.5z/data=!4m5!3m4!1s0x0:0x8f279eb8840de63a!8m2!3d45.257323!4d19.8704449"
+                        target="_blank">
+                        <img src="../img/map.png" alt="">
+                        <p>Aleksandra ostrovskog 10, 21132, Petrovaradin, Srbija<span></span></p>
+
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer-bottom">
+            <div class="footer-bottom__wrap">
+                <p class="copyright">&copy; 2019 Grifon-Leather</p>
+                <ul class="footer-nav">
+                    <li>
+                        <a href="#0">Početna</a>
+                    </li>
+                    <li>
+                        <a href="#0">katalog</a>
+                    </li>
+                    <li>
+                        <a href="#0">o nama</a>
+                    </li>
+                    <li>
+                        <a href="#0">kontakt</a>
+                    </li>
+                    <li>
+                        <a href="#0">Polisa privatnosti</a>
+                    </li>
+                    <li>
+                        <a href="#0">Uslovi koriscenja</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
     </footer>
     <!----- Footer END ----->
     <script src="../dist/bundle.js"></script>
