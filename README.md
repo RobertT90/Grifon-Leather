@@ -7,7 +7,7 @@ After cloning or downloading run npm install to install all node_modules!
 ////// Starting Webpack
 
 For Development: npm run dev
-For production: npm run build
+For Production: npm run build
 
 ////// Importing Scss files to Main.scss
 

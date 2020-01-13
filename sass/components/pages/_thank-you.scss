@@ -1,0 +1,74 @@
+/**************** Thank you Page Style ****************/
+
+.thank{
+    background-color: $black;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    &-content{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 800px;
+        margin: auto;
+        height: 100%;
+        position: relative;
+        z-index: 2;
+        h1{
+            color: $white;
+            margin-bottom: 30px;
+        }
+        p{
+            color: $orange;
+            font: 17px/1 $font-RalewayRegular;
+            margin-bottom: 30px;
+        }
+        .back-button{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            margin: 10px;
+            position: relative;
+            transition: 0.4s;
+            a{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid $orange;
+                padding: 10px 15px;
+                color: $white;
+                width: 180px;
+                font: 16px/1 $font-RalewayRegular;
+                transition: 0.4s;
+                img{
+                    width: 10px;
+                    transform: rotate(180deg);
+                }
+                &:hover{
+                    text-decoration: none;
+                    -moz-box-shadow:    0 0 6px $orange;
+                    -webkit-box-shadow: 0 0 6px $orange;
+                    box-shadow:         0 0 6px $orange;
+                    img{
+                        animation: arrow-slide 0.5s linear infinite alternate both;
+                    }
+                }
+
+            }
+        }
+    }
+}

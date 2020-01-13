@@ -8376,6 +8376,70 @@ header {
     z-index: 10;
     opacity: 1; }
 
+/**************** Thank you Page Style ****************/
+.thank {
+  background-color: #111111;
+  height: 80vh;
+  overflow: hidden;
+  position: relative; }
+  .thank-content {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin: auto;
+    height: 100%;
+    position: relative;
+    z-index: 2; }
+    .thank-content h1 {
+      color: #ffffff;
+      margin-bottom: 30px; }
+    .thank-content p {
+      color: #B55C30;
+      font: 17px/1 "Raleway Regular";
+      margin-bottom: 30px; }
+    .thank-content .back-button {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      margin: 10px;
+      position: relative;
+      transition: 0.4s; }
+      .thank-content .back-button a {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #B55C30;
+        padding: 10px 15px;
+        color: #ffffff;
+        width: 180px;
+        font: 16px/1 "Raleway Regular";
+        transition: 0.4s; }
+        .thank-content .back-button a img {
+          width: 10px;
+          transform: rotate(180deg); }
+        .thank-content .back-button a:hover {
+          text-decoration: none;
+          -moz-box-shadow: 0 0 6px #B55C30;
+          -webkit-box-shadow: 0 0 6px #B55C30;
+          box-shadow: 0 0 6px #B55C30; }
+          .thank-content .back-button a:hover img {
+            animation: arrow-slide 0.5s linear infinite alternate both; }
+
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {
