@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 var basket = document.querySelector('.basket');
 var body = document.querySelector('body');
+const catItem = document.querySelector('.cat-main__inner--item');
 
 
 document.getElementById('basket-button').addEventListener('click', function () {
@@ -17,6 +18,4 @@ document.querySelector('.basket-close').addEventListener('click', function () {
         body.classList.remove('no-scroll');
     }
 })
-
-
 
