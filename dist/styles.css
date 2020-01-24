@@ -8480,6 +8480,154 @@ header {
           opacity: 1; }
 
 /**************** Catalogue Responsive Style ****************/
+/**************** Product Detail Style ****************/
+.product-detail {
+  background-color: #111111;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .product-detail .product-overlay {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    z-index: 0;
+    right: -50px;
+    left: 0;
+    top: -50px; }
+    .product-detail .product-overlay img {
+      width: 550px;
+      opacity: 0.3; }
+  .product-detail__inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 1100px;
+    margin: auto;
+    justify-content: space-evenly;
+    padding: 100px 0; }
+    .product-detail__inner--info {
+      width: 750px;
+      margin: auto;
+      background-color: #1A1817;
+      position: relative;
+      z-index: 2;
+      padding: 40px;
+      margin-bottom: 40px; }
+      .product-detail__inner--info .back-link {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        color: #B55C30;
+        font: 16px/1 "Raleway Bold"; }
+        .product-detail__inner--info .back-link img {
+          height: 18px;
+          margin-right: 10px; }
+        .product-detail__inner--info .back-link:hover {
+          text-decoration: none; }
+          .product-detail__inner--info .back-link:hover img {
+            transform: rotate(-180deg);
+            animation: arrow-slide-alter 0.5s linear infinite alternate both; }
+      .product-detail__inner--info .detail-item {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px; }
+        .product-detail__inner--info .detail-item__images .img-big {
+          width: 300px;
+          margin-bottom: 30px; }
+        .product-detail__inner--info .detail-item__images .more-images {
+          display: -webkit-box;
+          display: -moz-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          justify-content: center; }
+          .product-detail__inner--info .detail-item__images .more-images .img-small {
+            width: 60px;
+            margin: 0 10px; }
+        .product-detail__inner--info .detail-item__text {
+          margin-left: 40px; }
+          .product-detail__inner--info .detail-item__text h3 {
+            color: #ffffff;
+            margin-bottom: 20px; }
+          .product-detail__inner--info .detail-item__text .price {
+            color: #ffffff;
+            font: 16px/1 "Raleway Bold";
+            margin-bottom: 20px; }
+          .product-detail__inner--info .detail-item__text .description {
+            color: #B55C30;
+            font: 16px/1 "Raleway Regular";
+            border-top: 1px dashed #B55C30;
+            border-bottom: 1px dashed rgba(181, 92, 48, 0.3);
+            padding: 20px 0;
+            margin-bottom: 20px; }
+          .product-detail__inner--info .detail-item__text form label {
+            color: #ffffff;
+            font: 16px/1 "Raleway Bold";
+            width: 100%;
+            margin-bottom: 20px; }
+            .product-detail__inner--info .detail-item__text form label input {
+              border: 1px solid #ffffff;
+              background-color: transparent;
+              color: #ffffff;
+              padding: 5px 0;
+              font: 16px/1 "Raleway Regular";
+              text-align: center; }
+            .product-detail__inner--info .detail-item__text form label input::-webkit-outer-spin-button,
+            .product-detail__inner--info .detail-item__text form label input::-webkit-inner-spin-button {
+              -webkit-appearance: none; }
+            .product-detail__inner--info .detail-item__text form label input[type=number] {
+              -moz-appearance: textfield; }
+          .product-detail__inner--info .detail-item__text form button {
+            border: 1px solid #ffffff;
+            background: #ffffff;
+            font: 16px/1 "Raleway Bold";
+            color: #111111;
+            padding: 10px 20px;
+            transition: 0.4s; }
+            .product-detail__inner--info .detail-item__text form button:hover {
+              cursor: pointer;
+              background: #111111;
+              color: #ffffff; }
+    .product-detail__inner--similar {
+      width: 800px;
+      margin: auto; }
+      .product-detail__inner--similar p {
+        font: 18px/1 "Raleway Bold";
+        text-align: center;
+        color: #B55C30;
+        margin-bottom: 40px; }
+      .product-detail__inner--similar .similar-images {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+        .product-detail__inner--similar .similar-images img {
+          width: 180px; }
+
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {
@@ -8524,4 +8672,26 @@ header {
     -ms-transform: translateX(5px) rotate(180deg);
     /* Internet Explorer */
     transform: translateX(5px) rotate(180deg); } }
+
+@keyframes arrow-slide-alter {
+  0% {
+    -webkit-transform: translateX(0);
+    /* WebKit */
+    -moz-transform: translateX(0);
+    /* Mozilla */
+    -o-transform: translateX(0);
+    /* Opera */
+    -ms-transform: translateX(0);
+    /* Internet Explorer */
+    transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(5px);
+    /* WebKit */
+    -moz-transform: translateX(5px);
+    /* Mozilla */
+    -o-transform: translateX(5px);
+    /* Opera */
+    -ms-transform: translateX(5px);
+    /* Internet Explorer */
+    transform: translateX(5px); } }
 
