@@ -33,3 +33,20 @@
         transform: translateX(5px) rotate(180deg);
     }
 }
+
+@keyframes arrow-slide-alter{
+    0%{
+        -webkit-transform: translateX(0); /* WebKit */
+        -moz-transform: translateX(0); /* Mozilla */
+        -o-transform: translateX(0); /* Opera */
+        -ms-transform: translateX(0); /* Internet Explorer */
+        transform: translateX(0);
+    }
+    100%{
+        -webkit-transform: translateX(5px); /* WebKit */
+        -moz-transform: translateX(5px); /* Mozilla */
+        -o-transform: translateX(5px); /* Opera */
+        -ms-transform: translateX(5px); /* Internet Explorer */
+        transform: translateX(5px);
+    }
+}
