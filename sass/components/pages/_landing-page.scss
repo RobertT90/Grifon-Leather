@@ -334,8 +334,16 @@
                     border: 1px dashed $orange;
                     background-color: $dark-brown;
                     color: $white;
+                    transition: 0.4s;
                     &:hover, &:active, &:focus{
                         outline: none;
+                    }
+                    &:focus{
+                        outline: none;
+                        margin-top: 10px;
+                        -moz-box-shadow:     0 0 10px $orange;
+                        -webkit-box-shadow:  0 0 10px $orange;
+                        box-shadow:          0 0 10px $orange;
                     }
                 }
             }
