@@ -53,146 +53,69 @@
 
     </header>
     <!----- Header and Navigation menu END ----->
-
     <!----- Main Section ----->
     <main>
-        <!----- Hero banner ----->
-        <section class="hero">
-            <span class="hero-overlay"><img src="../img/hero-bg.svg" alt=""></span>
-            <div class="hero-caption">
-                <img src="../img/logo.png" alt="">
-                <h1>Dobrodosli na Grifon Leather</h1>
-                <p>Na ovom sajtu se mozete potpuno upoznati sa samostalnom zanatskom radionicom "Grifon Leather", nasim
-                    radom i dobiti sve potrebne informacije o nama i nasim proizvodima</p>
-            </div>
-        </section>
-        <!----- Hero banner END ----->
-
-        <!----- Catalogue section ----->
-        <section class="catalogue">
-            <h2>Posetite Katalog iz nase kolekcije</h2>
-            <div class="catalogue-links">
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/business-bag.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Poslovna torba
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/lady-bag.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Damska Tasna
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/bag.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Torbe
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/agenda.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Agende
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/wallet.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Novcanici
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/belt.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            kaisevi
-                        </p>
-                    </span>
-                </a>
-                <a href="#0" class="catalogue-links__item">
-                    <span class="item-image" style="background-image: url(../img/key-chain.png);">
-                    </span>
-                    <span class="item-content">
-                        <p>
-                            Razno
-                        </p>
-                    </span>
-                </a>
-                <div class="catalogue-links__button">
-                    <a href="#0">
-                        Istrazite Kolekciju
-                        <img src="../img/arrow.svg" alt="" />
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!----- Catalogue section END ----->
-
-        <!----- Story section ----->
-        <section class="story">
-            <div class="story-content">
-                <div class="story-content__image">
-                    <img src="../img/workshop.png" alt="">
-                </div>
-                <div class="story-content__text">
-                    <h2>Prica o nasoj radionici</h2>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat cum, fugiat, in itaque
-                        consequatur possimus, nulla eveniet reiciendis aut consequuntur ipsum officia blanditiis
-                        deleniti pariatur maxime. Eaque fugit ipsa deleniti.</p>
-                    <a href="#0">
-                        Saznaj vise
-                        <img src="../img/arrow.svg" alt="" />
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!----- Story section END ----->
-        <!----- Main Form  ----->
-        <section class="contact">
-            <div class="contact-form">
-                <form action="">
-                    <h2>Kontaktirajte nas</h2>
+        <!----- Checkout Section ----->
+        <section class="checkout">
+            <span class="checkout-overlay"><img src="../img/hero-bg.svg" alt=""></span>
+            <div class="checkout-inner">
+                <a class="back-link" href="#0"><img src="../img/arrow.svg" alt="">Nazad</a>
+                <a class="check-basket" href="#0"><img src="../img/basket.svg" alt="">Pregledaj Korpu</a>
+                <p class="info">Postovani svi proizvodi se salju brzom postom. Nacin placanja Pouzecem + troskovi
+                    isporuke(vazi samo za teritoriju srbioje). Rok isporuke do 30 dana za kolicine do 10 komada. Za sve
+                    vece kolicine i dodatne mozete nas kontaktirati putem mejla</p>
+                <form action="" class="checkout-content">
                     <label for="name">
-                        <span>Vase Ime</span><sup>*</sup>
+                        <span>Vase Ime i prezime</span><sup>*</sup>
                         <input id="name" type="text">
                     </label>
+                    <label for="adress">
+                        <span>Adresa stanovanja</span><sup>*</sup>
+                        <input id="adress" type="text">
+                    </label>
+                    <label for="town">
+                        <span>Mesto stanovanja</span><sup>*</sup>
+                        <input id="town" type="text">
+                    </label>
+                    <label for="postcode">
+                        <span>Postanski broj</span><sup>*</sup>
+                        <input id="postcode" type="text">
+                    </label>
+                    <label for="state">
+                        <span>Postanski broj</span><sup>*</sup>
+                        <input id="state" type="text">
+                    </label>
+                    <label for="phone">
+                        <span>Kontakt telefon</span><sup>*</sup>
+                        <input id="phone" type="phone">
+                    </label>
                     <label for="email">
-                        <span>Vasa e-mail adresa</span><sup>*</sup>
+                        <span>Vasa e-mejl adresa</span><sup>*</sup>
                         <input id="email" type="email">
                     </label>
-                    <label for="message">
-                        <span>Vasa poruka</span><sup>*</sup>
-                        <textarea id="message" rows="5"></textarea>
-                    </label>
+                    <span class="price">
+                        <ul>
+                            <li>
+                                <p class="price"><span>Cena proizvoda :</span> 40.000,00 RSD</p>
+                            </li>
+                            <li>
+                                <p class="price"><span>Postarina :</span> 200,00 RSD</p>
+                            </li>
+                            <li>
+                                <p class="total"><span>Ukupan iznos :</span> 40.200,00 RSD</p>
+                            </li>
+                        </ul>
+                    </span>
                     <button type="submit">
-                        Posalji
+                        Poruci
                         <img src="../img/arrow.svg" alt="" />
                     </button>
                 </form>
             </div>
         </section>
-        <!----- Main Form END ----->
+        <!----- Checkout Section ----->
     </main>
-    <!----- Main Section END ----->
-
-
+    <!----- Main Section END----->
     <!----- Footer ----->
     <footer id="footer" class="footer">
         <section class="footer-top">
@@ -249,7 +172,6 @@
 
     </footer>
     <!----- Footer END ----->
-
     <!----- Basket ----->
     <section class="basket">
         <div class="basket-content">
@@ -281,12 +203,46 @@
             </div>
             <div class="item-price">
                 <p><span>Ukupan iznos :</span> 24.000din</p>
+                <a href="#0" class="order">Poruči</a>
             </div>
         </div>
     </section>
     <!----- Basket END ----->
-
-
+    <!----- Basket check ----->
+    <section class="basket-check">
+        <div class="basket-content">
+            <a class="basket-check__close" href="#0"><img src="../img/close.svg" alt=""></a>
+            <h4>Proizvodi u korpi</h4>
+            <div class="basket-content__item">
+                <span class="item-img" style="background-image: url(../img/basket-img.jpg);"></span>
+                <a href="#0" class="remove-item"></a>
+                <div class="item-content">
+                    <ul>
+                        <li>
+                            <p><span>Naziv proizvoda :</span>Elena</p>
+                        </li>
+                        <li>
+                            <p><span>Kataloska oznaka :</span>MT1</p>
+                        </li>
+                        <li>
+                            <p><span>Materijal :</span>Prirodna koza i svila</p>
+                        </li>
+                        <li>
+                            <p><span>Dimenzije :</span>430mmx320mmx100mm</p>
+                        </li>
+                        <li><span>Kolicina :</span><input type="number" min="1" max="9"></li>
+                        <li>
+                            <p><span>Cena:</span> 24.000din</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-price">
+                <p><span>Ukupan iznos :</span> 24.000din</p>
+            </div>
+        </div>
+    </section>
+    <!----- Basket check END ----->
     <script src="../dist/bundle.js"></script>
 </body>
 
