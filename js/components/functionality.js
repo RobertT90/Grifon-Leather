@@ -13,23 +13,25 @@ document.getElementById('basket-button').addEventListener('click', function () {
     }
 });
 
-document.querySelector('.check-basket').addEventListener('click', function () {
-    basketCheck.classList.toggle('open');
-    if (document.querySelector('.basket-check').classList.contains('open')) {
-        body.classList.add('no-scroll');
-    }
-})
-
 document.querySelector('.basket-close').addEventListener('click', function () {
     basket.classList.remove('open');
     if (!document.querySelector('.basket').classList.contains('open')) {
         body.classList.remove('no-scroll');
     }
-})
+});
+
+document.querySelector('.check-basket').addEventListener('click', function () {
+    basketCheck.classList.toggle('open');
+    if (document.querySelector('.basket-check').classList.contains('open')) {
+        body.classList.add('no-scroll');
+    }
+});
+
+
 
 document.querySelector('.basket-check__close').addEventListener('click', function () {
     basketCheck.classList.remove('open');
     if (!document.querySelector('.basket-check').classList.contains('open')) {
         body.classList.remove('no-scroll');
     }
-})
+});

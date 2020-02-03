@@ -13,13 +13,15 @@
 <body>
     <!----- Header and Navigation menu ----->
     <header id="header">
-        <div class="header">
-            <div class="menu-button">
+
+        <section class="header">
+            <!-- <div class="menu-button">
                 <button class="menu-toggle">
                     <span class="menu-toggle__text">menu</span>
                     <span class="menu-toggle__icon"></span>
                 </button>
-            </div>
+            </div> -->
+            <a class="logo-text" href="#0">Grifon Leather</a>
             <ul class="main-menu">
                 <li>
                     <a href="#0">Početna
@@ -42,76 +44,153 @@
             </ul>
 
             <ul class="language-select">
-                <li><a href="#0">eng</a></li>
-                <li><a href="#0">srb</a></li>
+                <li id="basket-button" class="basket-button active"><a href="#0"><img src="../img/basket.svg" /></a>
+                </li>
+                <li class="lang"><a href="#0">Eng</a></li>
+                <li class="lang active"><a href="#0">Srb</a></li>
             </ul>
-        </div>
+        </section>
+
     </header>
     <!----- Header and Navigation menu END ----->
-    <main id="content" class="content">
-        <!----- Contact Section ----->
-        <section class="contact-section">
-            <!----- Contact Section Form ----->
-            <div class="contact-section__form">
-                <h4>Uvek smo tu za vasa pitanja!</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse et dictum ante. Donec eget nulla
-                    volutpat ante placerat pharetra ac non tortor. </p>
-                <form>
-                    <label for="name">
-                        <span>Vase Ime<sup>*</sup></span>
-                        <input id="name" type="text">
-                    </label>
-                    <label for="subject">
-                        <span>tema<sup>*</sup></span>
-                        <input id="subject" type="text">
-                    </label>
-                    <label for="message">
-                        <span>vasa poruka<sup>*</sup></span>
-                        <textarea id="message" type="text" rows="20"></textarea>
-                    </label>
-                    <button class="form-submit" type="submit">posalji</button>
-                </form>
-            </div>
-            <!----- Contact Section Form END ----->
-            <!----- Contact Section Location ----->
-            <div class="contact-section__location">
-                <h4>Posetite nas</h4>
-                <div class="open-hours">
-                    <img src="../img/watch.png" alt="">
-                    <p>Radnim danima od 08h do 16h</p>
+
+    <!----- Main Section ----->
+    <main>
+        <section class="contact-page">
+            <span class="contact-overlay"><img src="../img/hero-bg.svg" alt=""></span>
+            <div class="contact-page__inner">
+                <h1>Uvek smo otvoreni za vasa pitanja</h1>
+                <div class="contact-page__inner--form">
+                    <div class="contact-form">
+                        <form action="">
+
+                            <label for="name">
+                                <span>Vase Ime</span><sup>*</sup>
+                                <input id="name" type="text">
+                            </label>
+                            <label for="email">
+                                <span>Vasa e-mail adresa</span><sup>*</sup>
+                                <input id="email" type="email">
+                            </label>
+                            <label for="message">
+                                <span>Vasa poruka</span><sup>*</sup>
+                                <textarea id="message" rows="5"></textarea>
+                            </label>
+                            <button type="submit">
+                                Posalji
+                                <img src="../img/arrow.svg" alt="" />
+                            </button>
+                        </form>
+                    </div>
+                    <div class="contact-image">
+                        <img class="map-image" src="../img/map-pic.jpg" alt="">
+                        <p>
+                            Nalazimo se u Petrovaradinu, 700 metara od zeleznickog mosta "Zezeljev most" sa desne
+                            strane,
+                            Mozete nas posetiti svakog radnog dana od 8h do 16h
+                        </p>
+                    </div>
                 </div>
-                <p>Nalazimo se u Petrovaradinu iz pravca Novog Sada, 700 metara od železnickog mosta "Žeželjevog mosta"
-                    sa desne strane</p>
+            </div>
+        </section>
+    </main>
+    <!----- Main Section END ----->
 
-                <!-- HERE SHOULD GO MAP LINK -->
 
-                <img class="location-map" src="../img/map-pic.png" alt="">
-                <ul class="contact-navigation">
+    <!----- Footer ----->
+    <footer id="footer" class="footer">
+        <section class="footer-top">
+            <ul class="footer-links">
+                <li>
+                    <a href=" mailto:grifon-leather@neaobee.net" target="_blank">
+                        <img src="../img/envelope.png" alt="">
+                        <p>grifon-leather@neaobee.net<span></span></p>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="tel:+381216434782">
+                        <img src="../img/phone.png" alt="">
+                        <p>+381 21 6434782<span></span></p>
+
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.google.com/maps/place/Grifon+leather/@45.2571819,19.8704702,19.5z/data=!4m5!3m4!1s0x0:0x8f279eb8840de63a!8m2!3d45.257323!4d19.8704449"
+                        target="_blank">
+                        <img src="../img/map.png" alt="">
+                        <p>Aleksandra ostrovskog 10, 21132, Petrovaradin, Srbija<span></span></p>
+
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="footer-bottom">
+            <div class="footer-bottom__wrap">
+                <p class="copyright">&copy; 2019 Grifon-Leather</p>
+                <ul class="footer-nav">
                     <li>
-                        <a href=" mailto:grifon-leather@neaobee.net" target="_blank">
-                            <img src="../img/envelope.png" alt="">
-                            <p>grifon-leather@neaobee.net</p>
-                            <span></span>
-                        </a>
+                        <a href="#0">Početna</a>
                     </li>
                     <li>
-                        <a href="tel:+381216434782">
-                            <img src="../img/phone.png" alt="">
-                            <p>+381 21 6434782</p>
-                            <span></span>
-                        </a>
+                        <a href="#0">katalog</a>
+                    </li>
+                    <li>
+                        <a href="#0">o nama</a>
+                    </li>
+                    <li>
+                        <a href="#0">kontakt</a>
+                    </li>
+                    <li>
+                        <a href="#0">Polisa privatnosti</a>
+                    </li>
+                    <li>
+                        <a href="#0">Uslovi koriscenja</a>
                     </li>
                 </ul>
             </div>
-            <!----- Contact Section Location END ----->
         </section>
-        <!----- Contact Section END ----->
-    </main>
-    <!----- Footer ----->
-    <footer id="footer" class="footer">
-        <p class="copyright">&copy; 2019 Grifon-Leather</p>
+
     </footer>
     <!----- Footer END ----->
+
+    <!----- Basket ----->
+    <section class="basket">
+        <div class="basket-content">
+            <a class="basket-close" href="#0"><img src="../img/close.svg" alt=""></a>
+            <h4>Proizvodi u korpi</h4>
+            <div class="basket-content__item">
+                <span class="item-img" style="background-image: url(../img/basket-img.jpg);"></span>
+                <a href="#0" class="remove-item"></a>
+                <div class="item-content">
+                    <ul>
+                        <li>
+                            <p><span>Naziv proizvoda :</span>Elena</p>
+                        </li>
+                        <li>
+                            <p><span>Kataloska oznaka :</span>MT1</p>
+                        </li>
+                        <li>
+                            <p><span>Materijal :</span>Prirodna koza i svila</p>
+                        </li>
+                        <li>
+                            <p><span>Dimenzije :</span>430mmx320mmx100mm</p>
+                        </li>
+                        <li><span>Kolicina :</span><input type="number" min="1" max="9"></li>
+                        <li>
+                            <p><span>Cena:</span> 24.000din</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="item-price">
+                <p><span>Ukupan iznos :</span> 24.000din</p>
+            </div>
+        </div>
+    </section>
+    <!----- Basket END ----->
+
+
     <script src="../dist/bundle.js"></script>
 </body>
 

@@ -7793,330 +7793,81 @@ header {
     opacity: 0.3; }
 
 /**************** About Section Responsive Style ****************/
-/**************** Order Form Style ****************/
-.order-section {
-  display: -ms-grid;
-  display: grid;
-  position: relative;
-  padding-top: 160px;
-  padding-bottom: 80px;
-  grid-template-areas: ". form .";
-  grid-template-columns: 1fr 800px 1fr; }
-  .order-section:before {
-    content: '';
-    position: absolute;
-    top: 160px;
-    bottom: 0;
-    left: -200px;
-    width: 700px;
-    height: 100%;
-    background: url(da82f76fbc73511e46bc618efbe41351.svg) no-repeat;
-    transform: rotateY(180deg);
-    opacity: 0.2; }
-  .order-section__form {
-    grid-area: form;
-    justify-content: center;
-    padding: 120px 60px 60px 60px;
-    background: #111111;
-    border: 3px solid rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 2; }
-    .order-section__form .form-image {
-      position: absolute;
-      top: -99px;
-      left: 50%;
-      transform: translateX(-50%);
-      height: 195px;
-      width: 195px;
-      padding: 22px;
-      overflow: hidden;
-      border-radius: 50%;
-      background: #111111 url(ac7c41ff8d46e96762f1e4759ed01fde.png) center/contain no-repeat; }
-      .order-section__form .form-image img {
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        object-fit: cover; }
-    .order-section__form p {
-      color: #919191;
-      font: 14px "Hind Madurai Regular";
-      margin-bottom: 40px; }
-    .order-section__form label {
-      width: 100%;
-      font: 16px "Cinzel Regular";
-      margin-bottom: 20px; }
-      .order-section__form label span {
-        color: #919191; }
-      .order-section__form label input {
-        width: 100%;
-        background: #111111;
-        border: 2px solid #B55C30;
-        color: #919191;
-        padding: 5px 10px;
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s; }
-        .order-section__form label input:focus {
-          outline: none;
-          margin-top: 10px;
-          -moz-box-shadow: 0 0 10px #B55C30;
-          -webkit-box-shadow: 0 0 10px #B55C30;
-          box-shadow: 0 0 10px #B55C30; }
-    .order-section__form .form-submit {
-      position: absolute;
-      bottom: -30px;
-      left: 50%;
-      padding: 15px 30px;
-      border: 3px solid rgba(0, 0, 0, 0.2);
-      background: #111111;
-      color: #ffffff;
-      font: 16px "Cinzel Regular";
-      -webkit-transform: scale(1) translate(-50%);
-      /* WebKit */
-      -moz-transform: scale(1) translate(-50%);
-      /* Mozilla */
-      -o-transform: scale(1) translate(-50%);
-      /* Opera */
-      -ms-transform: scale(1) translate(-50%);
-      /* Internet Explorer */
-      transform: scale(1) translate(-50%);
-      -webkit-transition: 0.4s;
-      -moz-transition: 0.4s;
-      -o-transition: 0.4s;
-      transition: 0.4s; }
-      .order-section__form .form-submit:hover {
-        -moz-box-shadow: 0 0 10px #000;
-        -webkit-box-shadow: 0 0 10px #000;
-        box-shadow: 0 0 10px #000;
-        -webkit-transform: scale(1.01) translate(-50%);
-        /* WebKit */
-        -moz-transform: scale(1.01) translate(-50%);
-        /* Mozilla */
-        -o-transform: scale(1.01) translate(-50%);
-        /* Opera */
-        -ms-transform: scale(1.01) translate(-50%);
-        /* Internet Explorer */
-        transform: scale(1.01) translate(-50%); }
-
-/**************** Order Form Responsive Style ****************/
-@media (max-width: 991px) {
-  .order-section {
-    grid-template-columns: 40px 1fr 40px;
-    overflow: hidden; } }
-
-@media (max-width: 580px) {
-  .order-section {
-    grid-template-columns: 20px 1fr 20px; } }
-
 /**************** Contact Page Style ****************/
-.contact-section {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 600px 50px 400px 1fr;
-  grid-template-areas: ". contact-form . contact-location .";
-  padding: 120px 0;
+.contact-page {
+  background-color: #111111;
   position: relative;
-  overflow-x: hidden; }
-  .contact-section h4 {
-    color: #B55C30; }
-  .contact-section p {
-    font: 14px "Hind Madurai Regular";
-    color: #919191; }
-  .contact-section:before {
-    content: '';
+  overflow: hidden;
+  min-height: 80vh; }
+  .contact-page .contact-overlay {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: flex-end;
     position: absolute;
-    top: 100px;
-    bottom: 100px;
-    right: -200px;
     z-index: 0;
-    width: 1000px;
-    opacity: 0.1;
-    background: url(da82f76fbc73511e46bc618efbe41351.svg) no-repeat;
-    background-position-x: 100%; }
-  .contact-section__form {
-    grid-area: contact-form;
+    right: -50px;
+    left: 0;
+    top: -50px; }
+    .contact-page .contact-overlay img {
+      width: 550px;
+      opacity: 0.3; }
+  .contact-page__inner {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 1100px;
+    margin: 80px auto;
+    justify-content: space-evenly;
     position: relative;
     z-index: 1; }
-    .contact-section__form P {
-      margin-bottom: 60px; }
-    .contact-section__form form {
-      -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) 0;
-      border: 3px solid rgba(0, 0, 0, 0.2);
-      background: #111111;
-      padding: 40px;
-      position: relative; }
-      .contact-section__form form label {
-        width: 100%;
-        width: 100%;
-        font: 16px "Cinzel Regular";
-        margin-bottom: 20px; }
-        .contact-section__form form label span {
-          color: #919191; }
-        .contact-section__form form label input, .contact-section__form form label textarea {
+    .contact-page__inner h1 {
+      color: #ffffff;
+      font-size: 28px;
+      width: 1000px;
+      margin: auto;
+      text-align: left; }
+    .contact-page__inner--form {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1; }
+      .contact-page__inner--form .contact-form {
+        position: relative;
+        z-index: 2;
+        width: auto;
+        margin: 0;
+        padding: 50px 0 80px 0; }
+        .contact-page__inner--form .contact-form form {
+          justify-content: center;
+          height: 100%; }
+      .contact-page__inner--form .contact-image {
+        width: 500px;
+        padding: 50px 0 80px 0;
+        position: relative; }
+        .contact-page__inner--form .contact-image .map-image {
           width: 100%;
-          background: #111111;
-          border: 2px solid #B55C30;
-          color: #919191;
-          padding: 5px 10px;
-          -webkit-transition: 0.4s;
-          -moz-transition: 0.4s;
-          -o-transition: 0.4s;
-          transition: 0.4s; }
-          .contact-section__form form label input:focus, .contact-section__form form label textarea:focus {
-            outline: none;
-            margin-top: 10px;
-            -moz-box-shadow: 0 0 10px #B55C30;
-            -webkit-box-shadow: 0 0 10px #B55C30;
-            box-shadow: 0 0 10px #B55C30; }
-      .contact-section__form form .form-submit {
-        position: absolute;
-        bottom: -30px;
-        left: 50%;
-        padding: 15px 30px;
-        border: 3px solid rgba(0, 0, 0, 0.2);
-        background: #111111;
-        color: #ffffff;
-        font: 16px "Cinzel Regular";
-        -webkit-transform: scale(1) translate(-50%);
-        /* WebKit */
-        -moz-transform: scale(1) translate(-50%);
-        /* Mozilla */
-        -o-transform: scale(1) translate(-50%);
-        /* Opera */
-        -ms-transform: scale(1) translate(-50%);
-        /* Internet Explorer */
-        transform: scale(1) translate(-50%);
-        -webkit-transition: 0.4s;
-        -moz-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s; }
-        .contact-section__form form .form-submit:hover, .contact-section__form form .form-submit:focus {
-          -moz-box-shadow: 0 0 10px #000;
-          -webkit-box-shadow: 0 0 10px #000;
-          box-shadow: 0 0 10px #000;
-          -webkit-transform: scale(1.01) translate(-50%);
-          /* WebKit */
-          -moz-transform: scale(1.01) translate(-50%);
-          /* Mozilla */
-          -o-transform: scale(1.01) translate(-50%);
-          /* Opera */
-          -ms-transform: scale(1.01) translate(-50%);
-          /* Internet Explorer */
-          transform: scale(1.01) translate(-50%);
-          outline: none;
-          cursor: pointer; }
-  .contact-section__location {
-    grid-area: contact-location;
-    position: relative;
-    z-index: 1; }
-    .contact-section__location .open-hours {
-      justify-content: center;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 30px; }
-      .contact-section__location .open-hours img {
-        width: 60px;
-        margin: 30px auto 10px; }
-      .contact-section__location .open-hours p {
-        text-align: center;
-        margin-bottom: 0; }
-    .contact-section__location img {
-      width: 100%; }
-    .contact-section__location .contact-navigation {
-      display: block;
-      padding-top: 30px;
-      padding-left: 0;
-      list-style: none;
-      margin: 0;
-      text-align: center; }
-      .contact-section__location .contact-navigation li {
-        margin-bottom: 20px; }
-        .contact-section__location .contact-navigation li a {
-          text-decoration: none;
-          position: relative;
-          display: inline-block; }
-          .contact-section__location .contact-navigation li a img {
-            height: 40px;
-            width: auto; }
-          .contact-section__location .contact-navigation li a:before, .contact-section__location .contact-navigation li a:after {
-            content: '';
-            width: 3px;
-            height: 3px;
-            border-radius: 50%;
-            opacity: 0;
-            background-color: #B55C30;
-            position: absolute;
-            bottom: 14px;
-            -webkit-transition: 1s;
-            -moz-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          .contact-section__location .contact-navigation li a span {
-            position: absolute;
-            height: 2px;
-            bottom: 15px;
-            left: 0;
-            width: 0;
-            border-bottom: 1px dashed #B55C30;
-            -webkit-transition: 1s;
-            -moz-transition: 1s;
-            -o-transition: 1s;
-            transition: 1s; }
-          .contact-section__location .contact-navigation li a:before {
-            left: -3px; }
-          .contact-section__location .contact-navigation li a:after {
-            right: -3px; }
-          .contact-section__location .contact-navigation li a:hover, .contact-section__location .contact-navigation li a:active {
-            text-decoration: none;
-            font: 16px "Cinzel Bold"; }
-            .contact-section__location .contact-navigation li a:hover span, .contact-section__location .contact-navigation li a:active span {
-              width: 100%; }
-            .contact-section__location .contact-navigation li a:hover:before, .contact-section__location .contact-navigation li a:active:before {
-              opacity: 1; }
-            .contact-section__location .contact-navigation li a:hover:after, .contact-section__location .contact-navigation li a:active:after {
-              opacity: 1; }
-
-/**************** Contact Page Responsive ****************/
-@media (max-width: 1200px) {
-  .contact-section {
-    grid-template-columns: 1fr 500px 50px 400px 1fr; } }
-
-@media (max-width: 991px) {
-  .contact-section {
-    grid-template-columns: 1fr 600px 1fr;
-    grid-template-areas: ". contact-form ." ".contact-location .";
-    padding: 80px 0  40px 0; }
-    .contact-section h4 {
-      text-align: center; }
-    .contact-section__form {
-      margin-bottom: 80px; }
-    .contact-section__location .contact-navigation {
-      justify-content: space-around;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      padding-top: 60px; }
-    .contact-section__location .location-map {
-      width: 100%;
-      height: 400px;
-      object-fit: cover; } }
-
-@media (max-width: 767px) {
-  .contact-section {
-    grid-template-columns: 30px 1fr 30px; } }
-
-@media (max-width: 480px) {
-  .contact-section__location .contact-navigation {
-    display: block; } }
+          margin-bottom: 30px; }
+        .contact-page__inner--form .contact-image p {
+          font: 16px/1.4 "Raleway Regular";
+          color: #B55C30;
+          margin-bottom: 0; }
+        .contact-page__inner--form .contact-image .map-pin {
+          position: absolute;
+          top: 335px;
+          right: 175px;
+          width: 30px; }
 
 /**************** Basket Style ****************/
 .basket {
@@ -8890,7 +8641,7 @@ header {
         border: 3px solid rgba(0, 0, 0, 0.2);
         background: #111111;
         color: #ffffff;
-        font: 16px "Cinzel Regular";
+        font: 16px "Raleway Regular";
         -webkit-transform: scale(1) translate(-50%);
         /* WebKit */
         -moz-transform: scale(1) translate(-50%);
@@ -8959,6 +8710,109 @@ header {
         -webkit-box-shadow: 0 0 6px #B55C30;
         box-shadow: 0 0 6px #B55C30; }
         .checkout-inner button:hover img {
+          animation: arrow-slide 0.5s linear infinite alternate both; }
+
+/**************** Catalogue Menu Style ****************/
+.error-page {
+  background-color: rgba(17, 17, 17, 0.99);
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
+  .error-page .error-overlay {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    height: 600px;
+    width: 1100px;
+    margin: auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center; }
+    .error-page .error-overlay img {
+      width: 100%;
+      opacity: 1; }
+  .error-page .line {
+    display: flex;
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2; }
+    .error-page .line-one, .error-page .line-two, .error-page .line-three {
+      position: absolute;
+      left: 0;
+      right: 0; }
+    .error-page .line-one {
+      width: 100%;
+      border-bottom: 2px dashed #B55C30;
+      top: 100px;
+      transform: rotate(1deg); }
+    .error-page .line-two {
+      width: 100%;
+      border-bottom: 2px dashed #B55C30;
+      top: 150px;
+      transform: rotate(-5deg); }
+    .error-page .line-three {
+      width: 100%;
+      border-bottom: 2px dashed #B55C30;
+      bottom: 60px;
+      transform: rotate(1deg); }
+  .error-page__inner {
+    width: 600px;
+    margin: auto;
+    position: relative;
+    z-index: 3;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .error-page__inner h1 {
+      color: #ffffff;
+      font-size: 42px; }
+    .error-page__inner p {
+      color: #ffffff;
+      font: 32px/1 "Raleway Regular";
+      text-align: center; }
+    .error-page__inner a {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid #B55C30;
+      padding: 10px 15px;
+      color: #ffffff;
+      width: 200px;
+      font: 16px/1 "Raleway Regular";
+      background-color: #1A1817;
+      transition: 0.4s; }
+      .error-page__inner a img {
+        width: 10px;
+        transform: rotate(180deg);
+        margin-left: 20px; }
+      .error-page__inner a:hover {
+        text-decoration: none;
+        -moz-box-shadow: 0 0 6px #B55C30;
+        -webkit-box-shadow: 0 0 6px #B55C30;
+        box-shadow: 0 0 6px #B55C30; }
+        .error-page__inner a:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
 
 /**************** Link animations ****************/

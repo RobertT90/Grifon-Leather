@@ -1,126 +1,223 @@
-/**************** Order Form Style ****************/
-
-.order-section{
-    display:-ms-grid;
-    display:grid;
+/**************** Catalogue Menu Style ****************/
+.checkout{
+    background-color: $black;
     position: relative;
-    padding-top: 160px;
-    padding-bottom: 80px;
-    grid-template-areas: 
-    ". form .";
-    grid-template-columns: 1fr 800px 1fr;
-    &:before{
-        content: '';
+    overflow: hidden;
+    min-height: 80vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    &-overlay{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: flex-end;
         position: absolute;
-        top: 160px;
-        bottom: 0;
-        left: -200px;
-        width: 700px;
-        height: 100%;
-        background: url('../img/hero-bg.svg') no-repeat;
-        transform: rotateY(180deg);
-        opacity: 0.2;
+        z-index: 0;
+        right: -50px;
+        left: 0;
+        top: -50px;
+        img{
+            width: 550px;
+            opacity: 0.3;
+        }
     }
-    &__form{
-        grid-area: form;
-        justify-content: center;
-        padding: 120px 60px 60px 60px;
-        background: $black;
-        border: 3px solid rgba(#000000, 0.2);
+    &-inner{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 700px;
+        margin: 80px auto;
+        justify-content: space-evenly;
+        padding: 60px 80px;
+        background-color: $dark-brown;
         position: relative;
-        z-index: 2;
-        .form-image{
-            position: absolute;
-            top: -99px;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 195px;
-            width: 195px;
-            padding: 22px;
-            overflow: hidden;
-            border-radius: 50%;
-            background: $black url('../img/frame.png') center/contain no-repeat;
+        z-index: 1;
+        .back-link{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            color: $orange;
+            font: 16px/1 $font-RalewayBold;                   
             img{
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                object-fit: cover;
+                height: 18px;
+                margin-right: 10px;
+            }
+            &:hover{
+                text-decoration: none;
+                img{
+                    transform: rotate(-180deg);
+                    animation: arrow-slide-alter 0.5s linear infinite alternate both;
+                }
             }
         }
-        p{
-            color: $grey;
-            font: 14px $font-HindMaduraiRegular;
-            margin-bottom: 40px;
-        }
-        label{
-            width: 100%;
-            font: 16px $font-CinzelRegular;
-            margin-bottom: 20px;
-            span{
-                color: $grey;
+        .check-basket{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $orange;
+            padding: 10px 0;
+            width: 200px;
+            margin: auto;
+            font: 16px/1 $font-RalewayBold;      
+            border: 1px dashed $orange;        
+            margin-bottom: 30px;     
+            img{
+                height: 18px;
+                margin-right: 10px;
             }
-            input{
+            &:hover{
+                text-decoration: none;
+                img{
+                    transform: rotate(-180deg);
+                    animation: arrow-slide-alter 0.5s linear infinite alternate both;
+                }
+            }
+        }
+        .info{
+            font: 14px/1 $font-RalewayRegular;
+            color: $white;
+        }
+        form{
+            position: relative;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            label{
+                margin-bottom: 20px;
                 width: 100%;
+                span{
+                    font: 16px/1 $font-RalewayBold;
+                    color: $orange;
+                }
+                sup{
+                    color: $orange;
+                }
+                input{
+                    font: 16px/1 $font-RalewayRegular;
+                    width: 100%;
+                    padding: 10px 10px;
+                    margin: 10px 0;
+                    border: 1px dashed $orange;
+                    background-color: $dark-brown;
+                    color: $white;
+                    transition: 0.4s;
+                    &:focus{
+                        outline: none;
+                        margin-top: 10px;
+                        -moz-box-shadow:     0 0 10px $orange;
+                        -webkit-box-shadow:  0 0 10px $orange;
+                        box-shadow:          0 0 10px $orange;
+                    }
+                }
+            }
+            .form-submit{
+                position: absolute;
+                bottom: -30px;
+                left: 50%;
+                padding: 15px 30px;
+                border: 3px solid rgba(#000000, 0.2);
                 background: $black;
-                border: 2px solid $orange;
-                color: $grey;
-                padding: 5px 10px;
+                color: $white;
+                font: 16px $font-RalewayRegular;
+                -webkit-transform: scale(1) translate(-50%); /* WebKit */
+                -moz-transform: scale(1) translate(-50%); /* Mozilla */
+                -o-transform: scale(1) translate(-50%); /* Opera */
+                -ms-transform: scale(1) translate(-50%); /* Internet Explorer */
+                transform: scale(1) translate(-50%);
                 -webkit-transition: 0.4s;
                 -moz-transition: 0.4s;
                 -o-transition: 0.4s;
                 transition: 0.4s;
-                &:focus{
+                &:hover, &:focus{
+                    -moz-box-shadow:     0 0 10px #000;
+                    -webkit-box-shadow:  0 0 10px #000;
+                    box-shadow:          0 0 10px #000;
+                    -webkit-transform: scale(1.01) translate(-50%); /* WebKit */
+                    -moz-transform: scale(1.01) translate(-50%); /* Mozilla */
+                    -o-transform: scale(1.01) translate(-50%); /* Opera */
+                    -ms-transform: scale(1.01) translate(-50%); /* Internet Explorer */
+                    transform: scale(1.01) translate(-50%);
                     outline: none;
-                    margin-top: 10px;
-                    -moz-box-shadow:     0 0 10px $orange;
-                    -webkit-box-shadow:  0 0 10px $orange;
-                    box-shadow:          0 0 10px $orange;
+                    cursor: pointer;
+                }
+            
+            }
+            
+            .price{
+                ul{
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        text-align: right;
+                        list-style: none;
+                        .price{
+                            font: 15px/1 $font-RalewayRegular;
+                            color: $white;
+                            span{
+                                font: 16px/1 $font-RalewayBold;
+                            }
+                        }
+                        .total{
+                            font: 19px/1 $font-RalewayRegular;
+                            color: $white;
+                            span{
+                                font: 20px/1 $font-RalewayBold;
+                            }
+                        }
+                    }
                 }
             }
         }
-        .form-submit{
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            padding: 15px 30px;
-            border: 3px solid rgba(#000000, 0.2);
-            background: $black;
+        button{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid $orange;
+            padding: 10px 15px;
             color: $white;
-            font: 16px $font-CinzelRegular;
-            -webkit-transform: scale(1) translate(-50%); /* WebKit */
-            -moz-transform: scale(1) translate(-50%); /* Mozilla */
-            -o-transform: scale(1) translate(-50%); /* Opera */
-            -ms-transform: scale(1) translate(-50%); /* Internet Explorer */
-            transform: scale(1) translate(-50%);
-            -webkit-transition: 0.4s;
-            -moz-transition: 0.4s;
-            -o-transition: 0.4s;
+            width: 100px;
+            font: 16px/1 $font-RalewayRegular;
+            background-color: $dark-brown;
             transition: 0.4s;
-            &:hover{
-                -moz-box-shadow:     0 0 10px #000;
-                -webkit-box-shadow:  0 0 10px #000;
-                box-shadow:          0 0 10px #000;
-                -webkit-transform: scale(1.01) translate(-50%); /* WebKit */
-                -moz-transform: scale(1.01) translate(-50%); /* Mozilla */
-                -o-transform: scale(1.01) translate(-50%); /* Opera */
-                -ms-transform: scale(1.01) translate(-50%); /* Internet Explorer */
-                transform: scale(1.01) translate(-50%);
+            
+            img{
+                width: 10px;
+                transform: rotate(180deg);
+            }
+               &:hover{
+                text-decoration: none;
+                -moz-box-shadow:    0 0 6px $orange;
+                -webkit-box-shadow: 0 0 6px $orange;
+                box-shadow:         0 0 6px $orange;
+                img{
+                    animation: arrow-slide 0.5s linear infinite alternate both;
+                }
             }
         }
-    }
-}
-
-/**************** Order Form Responsive Style ****************/
-
-@media(max-width:991px){
-    .order-section{
-        grid-template-columns: 40px 1fr 40px;
-        overflow: hidden;
-    }
-}
-
-@media(max-width: 580px){
-    .order-section{
-        grid-template-columns: 20px 1fr 20px;
     }
 }
