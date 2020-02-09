@@ -7,7 +7,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -10;
     height: 0;
     background-color: rgba($black, 0.5);
     transition: 0.4s;
@@ -18,7 +18,177 @@
         width: 600px;
         background-color: $white;
         padding: 30px 60px;
+        opacity: 0;
+        transition: 0.4s;
         .basket-close{
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            img{
+                display: inline-block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        h4{
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            border-bottom: 1px dashed $black;
+            padding-bottom: 20px;
+            
+        }
+        &__item{               
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed $black;
+            position: relative;
+            .item{
+                &-img{
+                    width: 200px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                &-content{
+                    ul{
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            font: 13px/1 $font-RalewayRegular;
+                            color: black;
+                            margin-bottom: 20px;
+                            p{
+                                margin-bottom: 0;
+                            }
+                            span{
+                                font-family: $font-RalewayBold;
+                                margin-right: 10px;
+                            }
+                            input{
+                                text-align: center;
+                                padding: 2px 0;
+                                line-height: 1;
+                                width: 25px;
+                                border: 1px solid $black;
+                                font: 14px/1 $font-RalewayRegular;
+                                color: black;
+                            }
+                            input::-webkit-outer-spin-button,
+                            input::-webkit-inner-spin-button{
+                                -webkit-appearance: none;
+                            }
+                            input[type=number] {
+                                -moz-appearance:textfield;
+                            }         
+                            &:nth-last-of-type(1){
+                                margin-bottom: 0;
+                            }                 
+                        }
+                    }
+                }
+
+            }
+            .remove-item{
+                position: absolute;
+                top: -10px;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                &:before,&:after{
+                    content: '';
+                    position: absolute;
+                    top: 10px;
+                    width: 20px;
+                    height: 2px;
+                    background: $black;
+                    border-radius: 3px;
+                }
+                &:before{
+                    left: 0;
+                    transform: rotate(45deg);
+
+                }
+                &:after{
+                    right: 0;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+    .item-price{
+        p{
+            font: 16px/1 $font-RalewayBold;
+            margin-bottom: 20px;
+            span{
+                margin-right: 10px;
+                font-family: $font-RalewayBold;
+                color: $orange;
+            }
+        }
+        .order{
+            display: inline-block;
+            font: 16px/1 $font-RalewayBold;
+            color: $white;
+            text-transform: uppercase;
+            background-color: $black;
+            border: 2px solid $black;
+            padding: 10px 20px;
+            transition: 0.4s;
+            &:hover{
+                text-decoration: none;
+                color: $black;
+                background: $white;
+            }
+        }
+    }
+    &.open{
+        display: block;
+        height: 100%;
+        z-index: 10;
+        opacity: 1;
+        .basket-content{
+            opacity: 1;
+        }
+    }
+}
+
+
+/**************** Basket Ckeck Style ****************/
+.basket-check{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 0;
+    background-color: rgba($black, 0.5);
+    transition: 0.4s;
+    .basket-content{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 600px;
+        background-color: $white;
+        padding: 30px 60px;
+        transition: 0.4s;
+        .basket-check__close{
             position: absolute;
             top: 0;
             left: 0;
@@ -162,166 +332,22 @@
     }
 }
 
+/**************** Basket Responsive Style ****************/
 
-/**************** Basket Ckeck Style ****************/
-.basket-check{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    height: 0;
-    background-color: rgba($black, 0.5);
-    transition: 0.4s;
-    .basket-content{
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 600px;
-        background-color: $white;
-        padding: 30px 60px;
-        .basket-check__close{
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: -webkit-box;
-            display: -moz-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            width: 30px;
-            height: 30px;
-            img{
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-            }
-        }
-        h4{
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            border-bottom: 1px dashed $black;
-            padding-bottom: 20px;
-            
-        }
-        &__item{               
-            display: -webkit-box;
-            display: -moz-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            justify-content: space-around;
-            margin: 20px 0;
-            padding-bottom: 20px;
-            border-bottom: 1px dashed $black;
-            position: relative;
-            .item{
-                &-img{
-                    width: 200px;
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                }
-                &-content{
-                    ul{
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        li{
-                            font: 13px/1 $font-RalewayRegular;
-                            color: black;
-                            margin-bottom: 20px;
-                            p{
-                                margin-bottom: 0;
-                            }
-                            span{
-                                font-family: $font-RalewayBold;
-                                margin-right: 10px;
-                            }
-                            input{
-                                text-align: center;
-                                padding: 2px 0;
-                                line-height: 1;
-                                width: 25px;
-                                border: 1px solid $black;
-                                font: 14px/1 $font-RalewayRegular;
-                                color: black;
-                            }
-                            input::-webkit-outer-spin-button,
-                            input::-webkit-inner-spin-button{
-                                -webkit-appearance: none;
-                            }
-                            input[type=number] {
-                                -moz-appearance:textfield;
-                            }         
-                            &:nth-last-of-type(1){
-                                margin-bottom: 0;
-                            }                 
-                        }
-                    }
-                }
 
-            }
-            .remove-item{
-                position: absolute;
-                top: -10px;
-                right: 0;
-                width: 20px;
-                height: 20px;
-                &:before,&:after{
-                    content: '';
-                    position: absolute;
-                    top: 10px;
-                    width: 20px;
-                    height: 2px;
-                    background: $black;
-                    border-radius: 3px;
-                }
-                &:before{
-                    left: 0;
-                    transform: rotate(45deg);
-
-                }
-                &:after{
-                    right: 0;
-                    transform: rotate(-45deg);
+@media(max-width: 767px){
+    .basket{
+        &-content{
+            max-width: 100%;
+            padding: 30px;
+            &__item{
+                flex-direction: column;
+                .item-img{
+                    width: 150px;
+                    height: 150px;
+                    margin-bottom: 10px;
                 }
             }
         }
-    }
-    .item-price{
-        p{
-            font: 16px/1 $font-RalewayBold;
-            margin-bottom: 20px;
-            span{
-                margin-right: 10px;
-                font-family: $font-RalewayBold;
-                color: $orange;
-            }
-        }
-        .order{
-            display: inline-block;
-            font: 16px/1 $font-RalewayBold;
-            color: $white;
-            text-transform: uppercase;
-            background-color: $black;
-            border: 2px solid $black;
-            padding: 10px 20px;
-            transition: 0.4s;
-            &:hover{
-                text-decoration: none;
-                color: $black;
-                background: $white;
-            }
-        }
-    }
-    &.open{
-        display: block;
-        height: 100%;
-        z-index: 10;
-        opacity: 1;
     }
 }

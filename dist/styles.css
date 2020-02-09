@@ -7077,11 +7077,12 @@ header {
   list-style: none; }
 
 .logo-text {
-  flex-basis: 200px;
+  flex-basis: 210px;
   font: 16px/1 "Libre Baskerville Bold";
   color: #ffffff;
   -webkit-font-smoothing: subpixel-antialiased;
-  transition: transform 0.2s ease-out; }
+  transition: transform 0.2s ease-out;
+  z-index: 6; }
   .logo-text:hover {
     color: #ffffff;
     transition: transform 0.2s ease-out;
@@ -7129,10 +7130,15 @@ header {
           width: 100%;
           opacity: 1; }
 
+.menu-button {
+  display: none; }
+
 .language-select {
   flex-basis: 200px;
   margin-bottom: 0;
-  list-style: none; }
+  list-style: none;
+  z-index: 4;
+  position: relative; }
   .language-select li {
     margin: 0 5px; }
     .language-select li:nth-of-type(1) {
@@ -7163,7 +7169,125 @@ header {
       border-radius: 10px;
       background-color: #ffffff; }
 
-/**************** Footer Main Style ****************/
+/**************** Header Responsive Style ****************/
+@media (max-width: 1200px) {
+  .header {
+    width: 900px; } }
+
+@media (max-width: 991px) {
+  header {
+    z-index: 5; }
+  .header {
+    position: relative;
+    justify-content: space-evenly;
+    width: 100%; }
+  .main-menu {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    z-index: -1;
+    transition: 0.4s;
+    height: 0;
+    background-color: #111111;
+    justify-content: flex-start;
+    flex-direction: column; }
+    .main-menu li {
+      margin: 10px 5px;
+      opacity: 0; }
+      .main-menu li a {
+        font: 18px/1 "Raleway Regular"; }
+    .main-menu.open {
+      opacity: 1;
+      top: 0;
+      height: 100vh;
+      padding-top: 120px;
+      z-index: 4; }
+      .main-menu.open li {
+        opacity: 1; }
+  .menu-button {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    z-index: 4; }
+    .menu-button .menu-toggle {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      background: transparent;
+      border: none;
+      align-items: center;
+      position: relative; }
+      .menu-button .menu-toggle:active, .menu-button .menu-toggle:focus {
+        outline: none; }
+      .menu-button .menu-toggle__text {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        align-content: center;
+        color: #B55C30;
+        margin-right: 10px;
+        font: 16px "Raleway Bold";
+        text-transform: uppercase; }
+      .menu-button .menu-toggle__icon {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        position: relative; }
+        .menu-button .menu-toggle__icon .line {
+          height: 2px;
+          width: 30px;
+          border-radius: 3px;
+          background: #B55C30;
+          position: absolute;
+          right: 5px;
+          top: 13px;
+          transition: 0.4s; }
+        .menu-button .menu-toggle__icon:before, .menu-button .menu-toggle__icon:after {
+          content: '';
+          position: absolute;
+          right: 5px;
+          width: 30px;
+          height: 2px;
+          border-radius: 3px;
+          background: #B55C30;
+          transition: 0.4s; }
+        .menu-button .menu-toggle__icon:before {
+          top: 8px; }
+        .menu-button .menu-toggle__icon:after {
+          bottom: 10px; }
+      .menu-button .menu-toggle.open .menu-toggle__icon .line {
+        width: 0; }
+      .menu-button .menu-toggle.open .menu-toggle__icon:before {
+        transform: rotate(-45deg);
+        top: 12px; }
+      .menu-button .menu-toggle.open .menu-toggle__icon:after {
+        transform: rotate(45deg);
+        bottom: 15px; } }
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: center; }
+    .header .logo-text {
+      flex-basis: auto; }
+    .header .language-select {
+      flex-basis: auto;
+      margin: 20px 0; }
+    .header .main-menu {
+      padding-top: 160px; } }
+
+/**************** Footer Style ****************/
 .footer {
   background: #1A1817; }
   .footer-top, .footer-bottom__wrap {
@@ -7264,6 +7388,38 @@ header {
             margin-right: 0; }
           .footer-bottom__wrap .footer-nav li a {
             color: #ffffff; }
+
+/**************** Footer Responsive Style ****************/
+@media (max-width: 1200px) {
+  .footer-top, .footer-bottom__wrap {
+    width: 900px; }
+  .footer-top .footer-links {
+    flex-direction: column; }
+    .footer-top .footer-links li {
+      margin-bottom: 20px; }
+      .footer-top .footer-links li a {
+        justify-content: center;
+        flex-direction: column; }
+        .footer-top .footer-links li a img {
+          margin-bottom: 20px; }
+      .footer-top .footer-links li:last-of-type {
+        margin-bottom: 0; } }
+
+@media (max-width: 991px) {
+  .footer-top, .footer-bottom__wrap {
+    width: 100%; }
+  .footer-bottom__wrap {
+    flex-direction: column-reverse; }
+    .footer-bottom__wrap .footer-nav {
+      flex-direction: column;
+      margin-bottom: 20px; }
+      .footer-bottom__wrap .footer-nav li {
+        margin: 10px 0;
+        text-align: center; } }
+
+@media (max-width: 480px) {
+  .footer-top .footer-links li a p {
+    text-align: center; } }
 
 /**************** Landing Page Style ****************/
 /**************** Hero Style ****************/
@@ -7582,6 +7738,12 @@ header {
           .contact-form form button:hover img {
             animation: arrow-slide 0.5s linear infinite alternate both; }
 
+/**************** Landing Page Responsive Style ****************/
+@media (max-width: 991px) {
+  .hero .hero-caption {
+    width: 100%;
+    padding: 0 30px; } }
+
 /**************** Catalogue Menu Style ****************/
 .cat-menu {
   background-color: #ffffff; }
@@ -7877,7 +8039,7 @@ header {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -10;
   height: 0;
   background-color: rgba(17, 17, 17, 0.5);
   transition: 0.4s; }
@@ -7887,7 +8049,9 @@ header {
     right: 0;
     width: 600px;
     background-color: #ffffff;
-    padding: 30px 60px; }
+    padding: 30px 60px;
+    opacity: 0;
+    transition: 0.4s; }
     .basket-content .basket-close {
       position: absolute;
       top: 0;
@@ -7998,6 +8162,8 @@ header {
     height: 100%;
     z-index: 10;
     opacity: 1; }
+    .basket.open .basket-content {
+      opacity: 1; }
 
 /**************** Basket Ckeck Style ****************/
 .basket-check {
@@ -8017,7 +8183,8 @@ header {
     right: 0;
     width: 600px;
     background-color: #ffffff;
-    padding: 30px 60px; }
+    padding: 30px 60px;
+    transition: 0.4s; }
     .basket-check .basket-content .basket-check__close {
       position: absolute;
       top: 0;
@@ -8128,6 +8295,18 @@ header {
     height: 100%;
     z-index: 10;
     opacity: 1; }
+
+/**************** Basket Responsive Style ****************/
+@media (max-width: 767px) {
+  .basket-content {
+    max-width: 100%;
+    padding: 30px; }
+    .basket-content__item {
+      flex-direction: column; }
+      .basket-content__item .item-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px; } }
 
 /**************** Thank you Page Style ****************/
 .thank {
@@ -8806,7 +8985,7 @@ header {
       .error-page__inner a img {
         width: 10px;
         transform: rotate(180deg);
-        margin-left: 20px; }
+        margin-left: 20pxgit; }
       .error-page__inner a:hover {
         text-decoration: none;
         -moz-box-shadow: 0 0 6px #B55C30;

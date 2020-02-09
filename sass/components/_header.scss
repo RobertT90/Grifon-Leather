@@ -35,11 +35,12 @@ header{
 }
 
 .logo-text{
-    flex-basis: 200px;
+    flex-basis: 210px;
     font: 16px/1 $font-LibreBold;
     color: $white;
     -webkit-font-smoothing: subpixel-antialiased;
     transition: transform 0.2s ease-out;
+    z-index: 6;
     &:hover{
         color: $white;
         transition: transform 0.2s ease-out;
@@ -98,11 +99,16 @@ header{
         }
     }
 }
+.menu-button{
+    display: none;
+}
 
 .language-select{
     flex-basis: 200px; 
     margin-bottom: 0;
     list-style: none;
+    z-index: 4;
+    position: relative;
     li{
         margin: 0 5px;
         &:nth-of-type(1){
@@ -146,6 +152,160 @@ header{
                 background-color: $white;
 
             }
+        }
+    }
+}
+
+/**************** Header Responsive Style ****************/
+@media(max-width: 1200px){
+    .header{
+        width: 900px;
+    }
+}
+
+@media(max-width: 991px){
+    header{
+        z-index: 5;
+    }
+    .header{
+        position: relative;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+    .main-menu{
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        z-index: -1;
+        transition: 0.4s;
+        height: 0;
+        background-color: $black;
+        justify-content: flex-start;
+        flex-direction: column;
+        li{
+            margin: 10px 5px;
+            opacity: 0;
+            a{
+                font: 18px/1 $font-RalewayRegular;
+            }
+        }
+        &.open{
+            opacity: 1;
+            top: 0;
+            height: 100vh;
+            padding-top: 120px;
+            z-index: 4;
+            li{
+                opacity: 1;
+            }
+        }
+    }
+    .menu-button{
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        position: relative;
+        z-index: 4;
+        .menu-toggle{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            background: transparent;
+            border: none;
+            align-items: center;
+            position: relative;
+            &:active, &:focus{
+                outline: none;
+            }
+            &__text{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                align-content: center;
+                color: $orange;
+               margin-right: 10px;
+                font: 16px $font-RalewayBold;
+                text-transform: uppercase;
+            }
+            &__icon{
+                display: -webkit-box;
+                display: -moz-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                .line{
+                    height: 2px;
+                    width: 30px;
+                    border-radius: 3px;
+                    background: $orange;
+                    position: absolute;
+                    right: 5px;
+                    top: 13px;
+                    transition: 0.4s;
+                }
+                &:before, &:after{
+                    content: '';
+                    position: absolute;
+                    right: 5px;
+                    width: 30px;
+                    height: 2px;
+                    border-radius: 3px;
+                    background: $orange;
+                    transition: 0.4s;
+                }
+                &:before{
+                    top: 8px;
+                }
+                &:after{
+                    bottom: 10px;
+                }
+            }
+            
+           
+            &.open{
+                .menu-toggle{
+                    &__icon{
+                        .line{
+                            width: 0;
+                        }
+                        &:before{
+                            transform: rotate(-45deg);
+                            top: 12px;
+                        }
+                        &:after{
+                            transform: rotate(45deg);
+                            bottom: 15px;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .header{
+        flex-direction: column;
+        align-items: center;
+        .logo-text{
+            flex-basis: auto;
+        }
+        .language-select{
+            flex-basis: auto;
+            margin: 20px 0;
+        }
+        .main-menu{
+            padding-top: 160px;
         }
     }
 }

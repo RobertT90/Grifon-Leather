@@ -1,4 +1,4 @@
-/**************** Footer Main Style ****************/
+/**************** Footer Style ****************/
 
 .footer{
     background: $dark-brown;
@@ -125,6 +125,73 @@
                     }
                 }
             }
+        }
+    }
+}
+
+/**************** Footer Responsive Style ****************/
+
+@media(max-width: 1200px){
+    .footer{
+        &-top, &-bottom__wrap{
+            width: 900px;
+        }
+        &-top{
+            .footer-links{
+                flex-direction: column;
+                li{
+                    margin-bottom: 20px;
+                    a{
+                        justify-content: center;
+                        flex-direction: column;
+                        img{
+                            margin-bottom: 20px;
+                        }
+                    }
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+@media(max-width: 991px){
+    .footer{
+        &-top, &-bottom__wrap{
+            width: 100%;
+        }
+        &-bottom{
+            &__wrap{
+                flex-direction: column-reverse; 
+                .footer-nav{
+                    flex-direction: column;
+                    margin-bottom: 20px;
+                    li{
+                        margin: 10px 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width: 480px){
+    .footer{
+        &-top{
+            .footer-links{
+                li{
+                    a{
+                        p{
+                            text-align: center;
+                        }
+                    }
+                 }
+            }
+                    
+              
         }
     }
 }
