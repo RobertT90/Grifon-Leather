@@ -7392,22 +7392,23 @@ header {
 /**************** Footer Responsive Style ****************/
 @media (max-width: 1200px) {
   .footer-top, .footer-bottom__wrap {
-    width: 900px; }
-  .footer-top .footer-links {
-    flex-direction: column; }
-    .footer-top .footer-links li {
-      margin-bottom: 20px; }
-      .footer-top .footer-links li a {
-        justify-content: center;
-        flex-direction: column; }
-        .footer-top .footer-links li a img {
-          margin-bottom: 20px; }
-      .footer-top .footer-links li:last-of-type {
-        margin-bottom: 0; } }
+    width: 950px; } }
 
 @media (max-width: 991px) {
   .footer-top, .footer-bottom__wrap {
     width: 100%; }
+  .footer-top .footer-links {
+    flex-direction: column; }
+    .footer-top .footer-links li {
+      margin: 0 0 20px; }
+      .footer-top .footer-links li a {
+        justify-content: center;
+        flex-direction: column; }
+        .footer-top .footer-links li a img {
+          margin-bottom: 20px;
+          margin-right: 0; }
+      .footer-top .footer-links li:last-of-type {
+        margin-bottom: 0; }
   .footer-bottom__wrap {
     flex-direction: column-reverse; }
     .footer-bottom__wrap .footer-nav {
@@ -7740,7 +7741,34 @@ header {
 
 /**************** Landing Page Responsive Style ****************/
 @media (max-width: 991px) {
-  .hero .hero-caption {
+  .hero-caption {
+    width: 100%;
+    padding: 0 30px; }
+  .catalogue-links {
+    width: 550px; }
+  .story-content {
+    flex-direction: column;
+    width: 100%; }
+    .story-content__image {
+      margin-bottom: 30px; }
+    .story-content__text {
+      text-align: center; }
+      .story-content__text a {
+        margin: auto; } }
+
+@media (max-width: 767px) {
+  .contact-form {
+    width: 100%;
+    padding: 80px 30px; } }
+
+@media (max-width: 580px) {
+  .catalogue-links {
+    width: 100%; }
+  .contact-form form {
+    padding: 40px 30px; } }
+
+@media (max-width: 480px) {
+  .story-content__text {
     width: 100%;
     padding: 0 30px; } }
 
@@ -8299,14 +8327,18 @@ header {
 /**************** Basket Responsive Style ****************/
 @media (max-width: 767px) {
   .basket-content {
-    max-width: 100%;
-    padding: 30px; }
+    padding: 30px;
+    width: 400px; }
     .basket-content__item {
       flex-direction: column; }
       .basket-content__item .item-img {
         width: 150px;
         height: 150px;
         margin-bottom: 10px; } }
+
+@media (max-width: 480px) {
+  .basket-content {
+    width: 100%; } }
 
 /**************** Thank you Page Style ****************/
 .thank {

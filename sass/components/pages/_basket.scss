@@ -338,8 +338,8 @@
 @media(max-width: 767px){
     .basket{
         &-content{
-            max-width: 100%;
             padding: 30px;
+            width: 400px;
             &__item{
                 flex-direction: column;
                 .item-img{
@@ -348,6 +348,14 @@
                     margin-bottom: 10px;
                 }
             }
+        }
+    }
+}
+
+@media(max-width: 480px){
+    .basket{
+        &-content{
+            width: 100%;
         }
     }
 }
