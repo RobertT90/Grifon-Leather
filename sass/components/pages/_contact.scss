@@ -89,3 +89,109 @@
     }
     
 }
+
+/**************** Contact Page Responsive Style ****************/
+
+@media (max-width: 1200px){
+    .contact-page{
+        &__inner{
+            width: 900px;
+            h1{
+                width: 900px;
+            }
+            &--form{
+                width: 100%;
+                justify-content: space-between;
+                .contact-image{
+                    width: 400px;
+                }
+                .contact-form{
+                    width: 400px;
+                    form{
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px){
+    .contact-page{
+        &__inner{
+            width: 600px;
+            padding: 40px;
+            margin: auto;
+            h1{
+                width: 100%;
+            }
+            &--form{
+                width: 100%;
+                justify-content: space-between;
+                .contact-image{
+                    width: 100%;
+                    padding: 20px 0;
+                }
+                .contact-form{
+                    width: 100%;
+                    padding: 40px 0;
+                    form{
+                        padding: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:767px){
+    .contact-page{
+        &__inner{
+            width: 100%;
+            padding: 40px;
+            h1{
+                width: 100%;
+            }
+            &--form{
+                width: 100%;
+                justify-content: space-between;
+                .contact-image{
+                    width: 100%;
+                    padding: 20px 0;
+                }
+                .contact-form{
+                    width: 100%;
+                    padding: 40px 0;
+                    form{
+                        padding: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:480px){
+    .contact-page{
+        &__inner{
+            width: 100%;
+            padding: 30px;
+            h1{
+                width: 100%;
+            }
+            &--form{
+                .contact-image{
+                    width: 100%;
+                    padding: 20px 0;
+                }
+                .contact-form{
+                    width: 100%;
+                    padding: 40px 0;
+                    form{
+                        padding: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

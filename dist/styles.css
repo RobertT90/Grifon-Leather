@@ -8059,6 +8059,74 @@ header {
           right: 175px;
           width: 30px; }
 
+/**************** Contact Page Responsive Style ****************/
+@media (max-width: 1200px) {
+  .contact-page__inner {
+    width: 900px; }
+    .contact-page__inner h1 {
+      width: 900px; }
+    .contact-page__inner--form {
+      width: 100%;
+      justify-content: space-between; }
+      .contact-page__inner--form .contact-image {
+        width: 400px; }
+      .contact-page__inner--form .contact-form {
+        width: 400px; }
+        .contact-page__inner--form .contact-form form {
+          padding: 20px; } }
+
+@media (max-width: 991px) {
+  .contact-page__inner {
+    width: 600px;
+    padding: 40px;
+    margin: auto; }
+    .contact-page__inner h1 {
+      width: 100%; }
+    .contact-page__inner--form {
+      width: 100%;
+      justify-content: space-between; }
+      .contact-page__inner--form .contact-image {
+        width: 100%;
+        padding: 20px 0; }
+      .contact-page__inner--form .contact-form {
+        width: 100%;
+        padding: 40px 0; }
+        .contact-page__inner--form .contact-form form {
+          padding: 40px; } }
+
+@media (max-width: 767px) {
+  .contact-page__inner {
+    width: 100%;
+    padding: 40px; }
+    .contact-page__inner h1 {
+      width: 100%; }
+    .contact-page__inner--form {
+      width: 100%;
+      justify-content: space-between; }
+      .contact-page__inner--form .contact-image {
+        width: 100%;
+        padding: 20px 0; }
+      .contact-page__inner--form .contact-form {
+        width: 100%;
+        padding: 40px 0; }
+        .contact-page__inner--form .contact-form form {
+          padding: 40px; } }
+
+@media (max-width: 480px) {
+  .contact-page__inner {
+    width: 100%;
+    padding: 30px; }
+    .contact-page__inner h1 {
+      width: 100%; }
+    .contact-page__inner--form .contact-image {
+      width: 100%;
+      padding: 20px 0; }
+    .contact-page__inner--form .contact-form {
+      width: 100%;
+      padding: 40px 0; }
+      .contact-page__inner--form .contact-form form {
+        padding: 20px; } }
+
 /**************** Basket Style ****************/
 .basket {
   opacity: 0;
