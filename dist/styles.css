@@ -8387,7 +8387,6 @@ header {
       color: #111111;
       background: #ffffff; }
   .basket-check.open {
-    display: block;
     height: 100%;
     z-index: 10;
     opacity: 1; }
