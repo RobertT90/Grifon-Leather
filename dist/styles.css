@@ -8135,7 +8135,7 @@ header {
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: -10;
+  z-index: -1;
   height: 0;
   background-color: rgba(17, 17, 17, 0.5);
   transition: 0.4s; }
@@ -8145,9 +8145,7 @@ header {
     right: 0;
     width: 600px;
     background-color: #ffffff;
-    padding: 30px 60px;
-    opacity: 0;
-    transition: 0.4s; }
+    padding: 30px 60px; }
     .basket-content .basket-close {
       position: absolute;
       top: 0;
@@ -8258,8 +8256,6 @@ header {
     height: 100%;
     z-index: 10;
     opacity: 1; }
-    .basket.open .basket-content {
-      opacity: 1; }
 
 /**************** Basket Ckeck Style ****************/
 .basket-check {
@@ -8279,8 +8275,7 @@ header {
     right: 0;
     width: 600px;
     background-color: #ffffff;
-    padding: 30px 60px;
-    transition: 0.4s; }
+    padding: 30px 60px; }
     .basket-check .basket-content .basket-check__close {
       position: absolute;
       top: 0;
@@ -8387,25 +8382,10 @@ header {
       color: #111111;
       background: #ffffff; }
   .basket-check.open {
+    display: block;
     height: 100%;
     z-index: 10;
     opacity: 1; }
-
-/**************** Basket Responsive Style ****************/
-@media (max-width: 767px) {
-  .basket-content {
-    padding: 30px;
-    width: 400px; }
-    .basket-content__item {
-      flex-direction: column; }
-      .basket-content__item .item-img {
-        width: 150px;
-        height: 150px;
-        margin-bottom: 10px; } }
-
-@media (max-width: 480px) {
-  .basket-content {
-    width: 100%; } }
 
 /**************** Thank you Page Style ****************/
 .thank {
