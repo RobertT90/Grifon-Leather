@@ -9018,7 +9018,7 @@ header {
         .checkout-inner button:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
 
-/**************** Catalogue Menu Style ****************/
+/**************** Error Page Style ****************/
 .error-page {
   background-color: rgba(17, 17, 17, 0.99);
   position: relative;
@@ -9120,6 +9120,31 @@ header {
         box-shadow: 0 0 6px #B55C30; }
         .error-page__inner a:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
+
+/**************** Error Page responsive Style ****************/
+@media (max-width: 1200px) {
+  .error-page .error-overlay {
+    width: 900px; } }
+
+@media (max-width: 991px) {
+  .error-page .error-overlay {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .error-page .error-overlay {
+    width: 500px; } }
+
+@media (max-width: 580px) {
+  .error-page .error-overlay {
+    width: 400px; }
+  .error-page__inner h1 {
+    font-size: 30px; }
+  .error-page__inner p {
+    font: 20px/1 "Raleway Regular"; } }
+
+@media (max-width: 480px) {
+  .error-page .error-overlay {
+    width: 300px; } }
 
 /**************** Link animations ****************/
 @keyframes scroll {
