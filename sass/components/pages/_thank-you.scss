@@ -72,3 +72,30 @@
         }
     }
 }
+
+/**************** Thank you Page Responsive Style ****************/
+
+@media(max-width:991px){
+    .thank{
+        &-content{
+            width: 700px;
+        }
+    }
+}
+
+@media(max-width:767px){
+    .thank{
+        &-content{
+            width: 500px;
+            text-align: center;
+        }
+    }
+}
+@media(max-width:580px){
+    .thank{
+        &-content{
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,4 +1,4 @@
-/**************** Catalogue Menu Style ****************/
+/**************** Error Page Style ****************/
 .error-page{
     background-color: rgba($black, 0.99);
     position: relative;
@@ -114,6 +114,56 @@
                     animation: arrow-slide 0.5s linear infinite alternate both;
                 }
             }
+        }
+    }
+}
+
+/**************** Error Page responsive Style ****************/
+
+@media(max-width:1200px){
+    .error-page{
+        .error-overlay{
+            width: 900px;
+        }
+    }
+}
+
+@media(max-width:991px){
+    .error-page{
+        .error-overlay{
+            width: 700px;
+        }
+    }
+}
+
+@media(max-width:767px){
+    .error-page{
+        .error-overlay{
+            width: 500px;
+        }
+    }
+}
+
+@media(max-width:580px){
+    .error-page{
+        .error-overlay{
+            width: 400px;
+        }
+        &__inner{
+            h1{
+                font-size: 30px;
+            }
+            p{
+                font: 20px/1 "Raleway Regular";
+            }
+        }
+    }
+}
+
+@media(max-width:480px){
+    .error-page{
+        .error-overlay{
+            width: 300px;
         }
     }
 }

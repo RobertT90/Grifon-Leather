@@ -2,6 +2,9 @@
 
 .cat-menu{
     background-color: $white;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
     &__inner{
         display: -webkit-box;
         display: -moz-box;
@@ -13,39 +16,18 @@
         justify-content: center;
         width: 1100px;
         margin: auto;
-        padding: 15px 0;
-        ul{
-            display: -webkit-box;
-            display: -moz-box;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            justify-content: flex-start;
-            width: 100%;
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            li{
-                margin: 0 10px;
-                &:first-of-type{
-                    margin-left: 0;
-                }
-                &:nth-last-of-type(1){
-                    margin-right: 0;
-                }
-                a{
-                    font: 15px/1 $font-RalewayRegular;
-                    color: $black;
-                    &:hover{
-                        font: 15px/1 $font-RalewayBold;
-                        text-decoration: none;
-                    }
-                    &.active{
-                        font: 15px/1 $font-RalewayBold;
-                    }
-                    transition: font-family 0.4s;
-                }
+        padding: 15px 10px;
+        a{
+            font: 15px/1 $font-RalewayRegular;
+            color: $black;
+            &:hover{
+                font: 15px/1 $font-RalewayBold;
+                text-decoration: none;
             }
+            &.active{
+                font: 15px/1 $font-RalewayBold;
+            }
+            transition: font-family 0.4s;
         }
     }
 }
@@ -54,7 +36,6 @@
 
 .cat-main{
     background-color: $black;
-    position: relative;
     overflow: hidden;
     .cat-overlay{
         display: -webkit-box;
@@ -63,13 +44,12 @@
         display: -ms-flexbox;
         display: flex;
         justify-content: flex-end;
-        position: absolute;
+        position: fixed;
         z-index: 0;
         right: -50px;
-        left: 0;
-        top: -50px;
+        top: 100px;
         img{
-            width: 550px;
+            width: 600px;
             opacity: 0.3;
         }
     }
@@ -214,4 +194,39 @@
 
 
 /**************** Catalogue Responsive Style ****************/
+@media(max-width: 991px){
+    .cat-main{
+        &__inner{
+            width: 700px;
+        }
+    }
+}
 
+@media(max-width: 767px){
+    .cat-main{
+        .cat-overlay{
+            right: -150px;
+        }
+        &__inner{
+            width: 500px;
+        }
+    }
+}
+@media(max-width: 580px){
+    .cat-main{
+        &__inner{
+            width: 400px;
+        }
+    }
+}
+
+@media(max-width:480px){
+    .cat-main{
+        &__inner{
+            width: 300px;
+        }
+        .cat-overlay{
+            right: -250px;
+        }
+    }
+}

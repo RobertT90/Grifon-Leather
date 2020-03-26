@@ -325,3 +325,25 @@
         opacity: 1;
     }
 }
+
+/**************** Basket Responsive Style ****************/
+
+@media(max-width:767px){
+    .basket{
+        &-content{
+            width: 350px;
+            &__item{
+                flex-direction: column;
+                .item-img{
+                    height: 200px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .basket-check{
+        .basket-content{
+            width: 350px;
+        }
+    }
+}

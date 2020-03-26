@@ -7051,7 +7051,9 @@ body.open {
 
 /**************** Header Style ****************/
 header {
-  background-color: #1A1817; }
+  background-color: #1A1817;
+  position: relative;
+  z-index: 1; }
 
 .header {
   display: -webkit-box;
@@ -7289,7 +7291,9 @@ header {
 
 /**************** Footer Style ****************/
 .footer {
-  background: #1A1817; }
+  background: #1A1817;
+  position: relative;
+  z-index: 1; }
   .footer-top, .footer-bottom__wrap {
     display: -webkit-box;
     display: -moz-box;
@@ -7461,19 +7465,19 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 50px; }
     .hero-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
 
 /**************** Catalogue Overview Style ****************/
 .catalogue {
   background-color: #111111;
-  padding: 80px 0; }
+  padding: 80px 0;
+  position: relative; }
   .catalogue h2 {
     color: #ffffff;
     font-size: 22px;
@@ -7619,7 +7623,8 @@ header {
     justify-content: space-evenly;
     align-items: center;
     width: 800px;
-    margin: auto; }
+    margin: auto;
+    position: relative; }
     .story-content__image {
       border-radius: 100%;
       border: 1px dashed #B55C30;
@@ -7669,7 +7674,8 @@ header {
 
 /**************** Contact Section Style ****************/
 .contact {
-  background-color: #111111; }
+  background-color: #111111;
+  position: relative; }
   .contact-form {
     width: 600px;
     margin: auto;
@@ -7745,7 +7751,10 @@ header {
     width: 100%;
     padding: 0 30px; }
   .catalogue-links {
-    width: 550px; }
+    width: 700px;
+    justify-content: flex-start; }
+    .catalogue-links__item {
+      flex-basis: 30%; }
   .story-content {
     flex-direction: column;
     width: 100%; }
@@ -7759,7 +7768,12 @@ header {
 @media (max-width: 767px) {
   .contact-form {
     width: 100%;
-    padding: 80px 30px; } }
+    padding: 80px 30px; }
+  .catalogue-links {
+    width: 500px;
+    justify-content: center; }
+    .catalogue-links__item {
+      flex-basis: auto; } }
 
 @media (max-width: 580px) {
   .catalogue-links {
@@ -7768,13 +7782,19 @@ header {
     padding: 40px 30px; } }
 
 @media (max-width: 480px) {
+  .hero-overlay {
+    top: 150px;
+    right: -150px; }
   .story-content__text {
     width: 100%;
     padding: 0 30px; } }
 
 /**************** Catalogue Menu Style ****************/
 .cat-menu {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
   .cat-menu__inner {
     display: -webkit-box;
     display: -moz-box;
@@ -7786,38 +7806,20 @@ header {
     justify-content: center;
     width: 1100px;
     margin: auto;
-    padding: 15px 0; }
-    .cat-menu__inner ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-      .cat-menu__inner ul li {
-        margin: 0 10px; }
-        .cat-menu__inner ul li:first-of-type {
-          margin-left: 0; }
-        .cat-menu__inner ul li:nth-last-of-type(1) {
-          margin-right: 0; }
-        .cat-menu__inner ul li a {
-          font: 15px/1 "Raleway Regular";
-          color: #111111;
-          transition: font-family 0.4s; }
-          .cat-menu__inner ul li a:hover {
-            font: 15px/1 "Raleway Bold";
-            text-decoration: none; }
-          .cat-menu__inner ul li a.active {
-            font: 15px/1 "Raleway Bold"; }
+    padding: 15px 10px; }
+    .cat-menu__inner a {
+      font: 15px/1 "Raleway Regular";
+      color: #111111;
+      transition: font-family 0.4s; }
+      .cat-menu__inner a:hover {
+        font: 15px/1 "Raleway Bold";
+        text-decoration: none; }
+      .cat-menu__inner a.active {
+        font: 15px/1 "Raleway Bold"; }
 
 /**************** Catalogue Main Style ****************/
 .cat-main {
   background-color: #111111;
-  position: relative;
   overflow: hidden; }
   .cat-main .cat-overlay {
     display: -webkit-box;
@@ -7826,13 +7828,12 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 100px; }
     .cat-main .cat-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
   .cat-main__inner {
     display: -webkit-box;
@@ -7947,6 +7948,26 @@ header {
           opacity: 1; }
 
 /**************** Catalogue Responsive Style ****************/
+@media (max-width: 991px) {
+  .cat-main__inner {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .cat-main .cat-overlay {
+    right: -150px; }
+  .cat-main__inner {
+    width: 500px; } }
+
+@media (max-width: 580px) {
+  .cat-main__inner {
+    width: 400px; } }
+
+@media (max-width: 480px) {
+  .cat-main__inner {
+    width: 300px; }
+  .cat-main .cat-overlay {
+    right: -250px; } }
+
 /**************** About Section Style ****************/
 .about-section {
   padding: 80px 0;
@@ -7976,13 +7997,35 @@ header {
       font: 16px "Raleway Regular";
       margin-bottom: 20px; }
   .about-section .about-overlay {
-    position: absolute;
-    top: 0;
-    right: -100px;
-    width: 800px;
-    opacity: 0.3; }
+    position: fixed;
+    z-index: 0;
+    right: -50px;
+    top: 50px; }
+    .about-section .about-overlay img {
+      width: 600px;
+      opacity: 0.3; }
 
 /**************** About Section Responsive Style ****************/
+@media (max-width: 991px) {
+  .about-section__content {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .about-section__content {
+    width: 500px; } }
+
+@media (max-width: 580px) {
+  .about-section__content {
+    width: 400px; } }
+
+@media (max-width: 480px) {
+  .about-section__content {
+    width: 100%;
+    padding: 0 15px; }
+  .about-section .about-overlay {
+    top: 150px;
+    right: -150px; } }
+
 /**************** Contact Page Style ****************/
 .contact-page {
   background-color: #111111;
@@ -7990,19 +8033,12 @@ header {
   overflow: hidden;
   min-height: 80vh; }
   .contact-page .contact-overlay {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 50px; }
     .contact-page .contact-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
   .contact-page__inner {
     display: -webkit-box;
@@ -8125,7 +8161,10 @@ header {
       width: 100%;
       padding: 40px 0; }
       .contact-page__inner--form .contact-form form {
-        padding: 20px; } }
+        padding: 20px; }
+  .contact-page .contact-overlay {
+    right: -150px;
+    top: 150px; } }
 
 /**************** Basket Style ****************/
 .basket {
@@ -8387,6 +8426,18 @@ header {
     z-index: 10;
     opacity: 1; }
 
+/**************** Basket Responsive Style ****************/
+@media (max-width: 767px) {
+  .basket-content {
+    width: 350px; }
+    .basket-content__item {
+      flex-direction: column; }
+      .basket-content__item .item-img {
+        height: 200px;
+        margin-bottom: 20px; }
+  .basket-check .basket-content {
+    width: 350px; } }
+
 /**************** Thank you Page Style ****************/
 .thank {
   background-color: #111111;
@@ -8451,9 +8502,27 @@ header {
           .thank-content .back-button a:hover img {
             animation: arrow-slide 0.5s linear infinite alternate both; }
 
+/**************** Thank you Page Responsive Style ****************/
+@media (max-width: 991px) {
+  .thank-content {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .thank-content {
+    width: 500px;
+    text-align: center; } }
+
+@media (max-width: 580px) {
+  .thank-content {
+    width: 100%;
+    padding: 0 20px; } }
+
 /**************** Catalogue Menu Style ****************/
 .cat-menu {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  z-index: 1; }
   .cat-menu__inner {
     display: -webkit-box;
     display: -moz-box;
@@ -8465,38 +8534,20 @@ header {
     justify-content: center;
     width: 1100px;
     margin: auto;
-    padding: 15px 0; }
-    .cat-menu__inner ul {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      justify-content: flex-start;
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      list-style: none; }
-      .cat-menu__inner ul li {
-        margin: 0 10px; }
-        .cat-menu__inner ul li:first-of-type {
-          margin-left: 0; }
-        .cat-menu__inner ul li:nth-last-of-type(1) {
-          margin-right: 0; }
-        .cat-menu__inner ul li a {
-          font: 15px/1 "Raleway Regular";
-          color: #111111;
-          transition: font-family 0.4s; }
-          .cat-menu__inner ul li a:hover {
-            font: 15px/1 "Raleway Bold";
-            text-decoration: none; }
-          .cat-menu__inner ul li a.active {
-            font: 15px/1 "Raleway Bold"; }
+    padding: 15px 10px; }
+    .cat-menu__inner a {
+      font: 15px/1 "Raleway Regular";
+      color: #111111;
+      transition: font-family 0.4s; }
+      .cat-menu__inner a:hover {
+        font: 15px/1 "Raleway Bold";
+        text-decoration: none; }
+      .cat-menu__inner a.active {
+        font: 15px/1 "Raleway Bold"; }
 
 /**************** Catalogue Main Style ****************/
 .cat-main {
   background-color: #111111;
-  position: relative;
   overflow: hidden; }
   .cat-main .cat-overlay {
     display: -webkit-box;
@@ -8505,13 +8556,12 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 100px; }
     .cat-main .cat-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
   .cat-main__inner {
     display: -webkit-box;
@@ -8626,6 +8676,26 @@ header {
           opacity: 1; }
 
 /**************** Catalogue Responsive Style ****************/
+@media (max-width: 991px) {
+  .cat-main__inner {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .cat-main .cat-overlay {
+    right: -150px; }
+  .cat-main__inner {
+    width: 500px; } }
+
+@media (max-width: 580px) {
+  .cat-main__inner {
+    width: 400px; } }
+
+@media (max-width: 480px) {
+  .cat-main__inner {
+    width: 300px; }
+  .cat-main .cat-overlay {
+    right: -250px; } }
+
 /**************** Product Detail Style ****************/
 .product-detail {
   background-color: #111111;
@@ -8650,7 +8720,7 @@ header {
     left: 0;
     top: -50px; }
     .product-detail .product-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
   .product-detail__inner {
     display: -webkit-box;
@@ -8804,7 +8874,7 @@ header {
   .product-detail__inner {
     width: 300px; } }
 
-/**************** Catalogue Menu Style ****************/
+/**************** Order Page Style ****************/
 .checkout {
   background-color: #111111;
   position: relative;
@@ -8822,13 +8892,12 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 50px; }
     .checkout-overlay img {
-      width: 550px;
+      width: 600px;
       opacity: 0.3; }
   .checkout-inner {
     display: -webkit-box;
@@ -9000,7 +9069,26 @@ header {
         .checkout-inner button:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
 
-/**************** Catalogue Menu Style ****************/
+/**************** Order Page Responsive Style ****************/
+@media (max-width: 767px) {
+  .checkout-inner {
+    width: 100%;
+    padding: 30px 40px;
+    margin: 80px 40px; } }
+
+@media (max-width: 580px) {
+  .checkout-inner {
+    width: 100%;
+    padding: 20px 40px;
+    margin: 80px 20px; }
+  .checkout-overlay {
+    right: -150px; } }
+
+@media (max-width: 480px) {
+  .checkout-overlay {
+    top: 150px; } }
+
+/**************** Error Page Style ****************/
 .error-page {
   background-color: rgba(17, 17, 17, 0.99);
   position: relative;
@@ -9103,6 +9191,31 @@ header {
         .error-page__inner a:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
 
+/**************** Error Page responsive Style ****************/
+@media (max-width: 1200px) {
+  .error-page .error-overlay {
+    width: 900px; } }
+
+@media (max-width: 991px) {
+  .error-page .error-overlay {
+    width: 700px; } }
+
+@media (max-width: 767px) {
+  .error-page .error-overlay {
+    width: 500px; } }
+
+@media (max-width: 580px) {
+  .error-page .error-overlay {
+    width: 400px; }
+  .error-page__inner h1 {
+    font-size: 30px; }
+  .error-page__inner p {
+    font: 20px/1 "Raleway Regular"; } }
+
+@media (max-width: 480px) {
+  .error-page .error-overlay {
+    width: 300px; } }
+
 /**************** Link animations ****************/
 @keyframes scroll {
   0% {
@@ -9171,10 +9284,10 @@ header {
     transform: translateX(5px); } }
 
 /**************** Product Detail Slider Style ****************/
-.owl-carousel {
+.owl-detail {
   position: relative;
   z-index: 1; }
-  .owl-carousel .owl-item {
+  .owl-detail .owl-item {
     width: 170px; }
 
 .owl-stage-outer {
