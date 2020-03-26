@@ -44,5 +44,35 @@
 /**************** About Section Responsive Style ****************/
 
 @media (max-width: 991px){
-    
+    .about-section{
+        &__content{
+            width: 700px;
+        }
+        .about-overlay{
+            width: 100%;
+        }
+    }
+}
+
+@media(max-width: 767px){
+    .about-section{
+        &__content{
+            width: 500px;
+        }
+    }
+}
+
+@media(max-width:580px){
+    .about-section{
+        &__content{
+            width: 400px;
+        }
+    }
+}
+@media(max-width:480px){
+    .about-section{
+        &__content{
+            width: 300px;
+        }
+    }
 }
