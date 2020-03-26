@@ -33,11 +33,14 @@
         }
     }
     .about-overlay{
-        position: absolute;
-        top: 0;
-        right: -100px;
-        width: 800px;
-        opacity: 0.3;
+        position: fixed;
+        z-index: 0;
+        right: -50px;
+        top: 50px;
+        img{
+            width: 600px;
+            opacity: 0.3;
+        }
     }
 }
 
@@ -47,9 +50,6 @@
     .about-section{
         &__content{
             width: 700px;
-        }
-        .about-overlay{
-            width: 100%;
         }
     }
 }
@@ -72,7 +72,12 @@
 @media(max-width:480px){
     .about-section{
         &__content{
-            width: 300px;
+            width: 100%;
+            padding: 0 15px;
+        }
+        .about-overlay{
+            top: 150px;
+            right: -150px;
         }
     }
 }

@@ -6,19 +6,12 @@
     overflow: hidden;
     min-height: 80vh;
     .contact-overlay{
-        display: -webkit-box;
-        display: -moz-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
+        position: fixed;
         z-index: 0;
         right: -50px;
-        left: 0;
-        top: -50px;
+        top: 50px;
         img{
-            width: 550px;
+            width: 600px;
             opacity: 0.3;
         }
     }
@@ -192,6 +185,10 @@
                     }
                 }
             }
+        }
+        .contact-overlay{
+            right: -150px;
+            top: 150px;
         }
     }
 }
