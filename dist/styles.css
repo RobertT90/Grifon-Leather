@@ -8862,7 +8862,7 @@ header {
   .product-detail__inner {
     width: 300px; } }
 
-/**************** Catalogue Menu Style ****************/
+/**************** Order Page Style ****************/
 .checkout {
   background-color: #111111;
   position: relative;
@@ -8880,11 +8880,10 @@ header {
     display: -ms-flexbox;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
+    position: fixed;
     z-index: 0;
     right: -50px;
-    left: 0;
-    top: -50px; }
+    top: 50px; }
     .checkout-overlay img {
       width: 550px;
       opacity: 0.3; }
@@ -9057,6 +9056,25 @@ header {
         box-shadow: 0 0 6px #B55C30; }
         .checkout-inner button:hover img {
           animation: arrow-slide 0.5s linear infinite alternate both; }
+
+/**************** Order Page Responsive Style ****************/
+@media (max-width: 767px) {
+  .checkout-inner {
+    width: 100%;
+    padding: 30px 40px;
+    margin: 80px 40px; } }
+
+@media (max-width: 580px) {
+  .checkout-inner {
+    width: 100%;
+    padding: 20px 40px;
+    margin: 80px 20px; }
+  .checkout-overlay {
+    right: -150px; } }
+
+@media (max-width: 480px) {
+  .checkout-overlay {
+    top: 150px; } }
 
 /**************** Error Page Style ****************/
 .error-page {
