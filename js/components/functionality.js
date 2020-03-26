@@ -1,4 +1,40 @@
 import $ from 'jquery';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel';
+
+
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        nav: true,
+        navText: ["<img src='../img/arrow.png'>", "<img src='../img/arrow.png'>"],
+        loop: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                margin: 40,
+            },
+            480: {
+                items: 2,
+                nav: false,
+                margin: 40,
+            },
+            580: {
+                items: 3,
+                margin: 40,
+                nav: false,
+            },
+            767: {
+                items: 3,
+                margin: 20,
+            },
+            1000: {
+                items: 4,
+                margin: 40,
+            }
+        }
+    });
+});
 
 var basket = document.querySelector('.basket');
 var basketCheck = document.querySelector('.basket-check');
@@ -41,4 +77,3 @@ if (document.querySelector('.check-basket')) {
         }
     });
 }
-
