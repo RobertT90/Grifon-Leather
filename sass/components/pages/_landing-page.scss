@@ -43,11 +43,10 @@
         display: -ms-flexbox;
         display: flex;
         justify-content: flex-end;
-        position: absolute;
+        position: fixed;
         z-index: 0;
         right: -50px;
-        left: 0;
-        top: -50px;
+        top: 50px;
         img{
             width: 550px;
             opacity: 0.3;
@@ -60,6 +59,7 @@
 .catalogue{
     background-color: $black;
     padding: 80px 0;
+    position: relative;
     h2{
         color: $white;
         font-size: 22px;
@@ -224,6 +224,7 @@
 .story{
     background-color: $dark-brown;
     padding: 80px 0;
+    
     &-content{
         display: -webkit-box;
         display: -moz-box;
@@ -234,6 +235,7 @@
         align-items: center;
         width: 800px;
         margin: auto;
+        position: relative;
         &__image{
             border-radius: 100%;
             border: 1px dashed $orange;
@@ -297,6 +299,7 @@
 
 .contact{
     background-color: $black;
+    position: relative;
     &-form{
         width: 600px;
         margin: auto;
@@ -392,7 +395,11 @@
     }
     .catalogue{
         &-links{
-            width: 550px;
+            width: 700px;
+            justify-content: flex-start;
+            &__item{
+                flex-basis: 30%;
+            }
         }
     }
     .story{
@@ -417,6 +424,15 @@
         width: 100%;
         padding: 80px 30px;
     }
+    .catalogue{
+        &-links{
+            width: 500px;
+            justify-content: center;
+            &__item{
+                flex-basis: auto;
+            }
+        }
+    }
 }
 
 @media(max-width: 580px){
@@ -432,6 +448,12 @@
     }
 }
 @media(max-width:480px){
+    .hero{
+        &-overlay{
+            top: 150px;
+            right: -150px;
+        }
+    }
     .story{
         &-content{
             &__text{

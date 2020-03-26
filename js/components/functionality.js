@@ -4,7 +4,7 @@ import 'owl.carousel';
 
 
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
+    $('.owl-detail').owlCarousel({
         nav: true,
         navText: ["<img src='../img/arrow.png'>", "<img src='../img/arrow.png'>"],
         loop: true,
@@ -34,6 +34,12 @@ $(document).ready(function () {
             }
         }
     });
+    $('.owl-menu').owlCarousel({
+        nav: true,
+        autoWidth: true,
+        margin: 30,
+        dots: false,
+    });
 });
 
 var basket = document.querySelector('.basket');
@@ -44,7 +50,7 @@ const catItem = document.querySelector('.cat-main__inner--item');
 document.querySelector('.menu-toggle').addEventListener('click', function () {
     document.querySelector('.menu-toggle').classList.toggle('open');
     document.querySelector('.main-menu').classList.toggle('open');
-    body.classList.add('no-scroll');
+    body.classList.toggle('no-scroll');
 });
 
 
