@@ -7338,7 +7338,7 @@ header {
             position: relative; }
             .footer-top .footer-links li a p span {
               position: absolute;
-              bottom: -7px;
+              bottom: -8px;
               left: 0;
               border: 0.5px dashed #B55C30;
               width: 0;
@@ -7347,7 +7347,7 @@ header {
               .footer-top .footer-links li a p span:before, .footer-top .footer-links li a p span:after {
                 content: '';
                 position: absolute;
-                bottom: -2px;
+                bottom: -1px;
                 width: 3px;
                 height: 3px;
                 border-radius: 50%;
